@@ -1,0 +1,149 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Primer examen parcial (Examen A)\\  Curso de Física 1\vspace{-5ex}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item De acuerdo al Sistema Internacional de Unidades ¿cuántas son las magnitudes fundamentales?
+
+R = $7$.
+
+\item Las siguientes cantidades:
+
+$3$ pulgadas, $24$ litros, $100$ kilogramos, $0.001$ milímetros.
+
+Son ejemplos de cantidades de tipo:
+
+R = Escalares
+
+\item Una cantidad vectorial se caracteriza por:
+\begin{enumerate}[label=\roman*)]
+\item Sentido, Largo, Dirección.
+\item Magnitud, Cuadrante, Sentido.
+\item Dirección, Sentido, Magnitud
+\end{enumerate}
+R = III
+
+\item Un conductor es detenido en la carretera, la policía le comenta que rebasó el límite de velocidad que es de \SI{100}{\kilo\meter\per\hour}, el conductor argumenta que manejaba a $1.25$ millas\unit{\per\second}.
+
+¿A qué velocidad en \unit{\kilo\meter\per\hour} iba conduciendo el auto? ¿Merecía la multa?
+
+R = Hay que convertir las $1.25$ millas\unit{\per\hour} a \unit{\kilo\meter\per\hour}.
+
+Factor de conversión: 1 milla = \SI{1.609}{\kilo\meter}, \SI{1}{\hour} = \SI{60}{\minute}, por lo que:
+\begin{align*}
+1.25 \, \dfrac{\text{millas}}{\unit{\minute}} \left( \dfrac{\SI{60}{\minute}}{\SI{1}{\hour}} \right) \left( \dfrac{\SI{1.609}{\kilo\meter}}{1 \, \text{milla}} \right) = \SI[per-mode=fraction]{120.67}{\kilo\meter\per\hour}
+\end{align*}
+Si merecía la multa por rebasar el límite de velocidad.
+\item ¿Cuántos milímetros son 150 nanómetros (\unit{\nano\meter})?
+
+R = \SI{1.5d-4}{\nano\meter}
+
+\item Ordena las siguientes cantidades de mayor a menor:
+\begin{enumerate}[label=\alph*)]
+\item \num{86102000}
+\item \num{8.61d8}
+\item \num{86120000}
+\item \num{8.61d7}
+\end{enumerate}
+
+R = b), c), a), d)
+
+\item Realiza la siguiente operación entre cantidades escritas en notación científica:
+\begin{align*}
+\dfrac{\num{2.1d4}}{\num{8.2d-6}} =
+\end{align*}
+
+R = $\dfrac{\num{2.1d4}}{\num{8.2d-6}} = \left(\dfrac{2.1}{8.2} \right) \times 10^{4-(-6)} = \num{2.56097d9}$
+
+\item Realiza la siguiente operación con notación científica, en cada paso debe de expresarse la cantidad con esa notación.
+\begin{align*}
+\dfrac{(\num{7.2d5} - \num{12d4})}{(0.003)^2} =
+\end{align*}
+\begin{align*}
+R &= \dfrac{(\num{7.2d5} - \num{12d4})}{(0.003)^2} = \dfrac{(\num{7.2d5} - \num{0.12d5})}{(\num{3d-3})^2} = \\[0.5em]
+&= \dfrac{(7.2 - 0.12) \times \num{d5}}{(3^2) \times 10^{(-3 \cdot 2)}} = \dfrac{\num{7.08d5}}{\num{9d-6}} = \\[0.5em]
+&= \left( \dfrac{7.08}{9} \right) \times 10^{5-(-6)} = \num{7.8d11}
+\end{align*}
+Problema de ejecución: Deberás de enviar la evidencia de tu desarrollo, en caso de que el ejercicio esté respondido pero no se tenga la evidencia, no contabiliza para la calificación.
+
+Realiza la siguiente operación con notación científica, en cada paso debe de expresarse la cantidad con esa notación.
+
+% [ (7.2x10^5 - 12x10^4) (16x10^-8 + 1.4x10-7) ] / (0.003)^2
+
+\item Es la unidad de intensidad luminosa:
+
+R = Candela.
+
+\item En una práctica de laboratorio se está utilizando un multímetro en la función de resistencia eléctrica, donde aprovecha la corriente que le suministra una pila interna. En el display del equipo ya aparece el icono de batería baja. A las lecturas de resistencia eléctrica que se realicen con el multímetro con la pila se les asociará un:
+
+R = Error aleatorio.
+
+\item La precisión es:
+
+R = Obtener los mismos resultados en las mismas condiciones.
+
+\item  A continuación se presentan las medidas de tiempo de un recorrido efectuadas por diferentes alumnos:
+\SI{3.01}{\second}, \SI{3.11}{\second}, \SI{3.20}{\second}, \SI{3.15}{\second}, \SI{3.28}{\second}, \SI{3.35}{\second}
+
+Expresa en términos del valor promedio y el error absoluto, el tiempo del recorrido.
+
+R = $t^{\prime} = t \pm \Delta t \quad \quad t^{\prime} = 3.18 \pm 0.09 \, s$
+
+\item Un vector A tiene una dirección de 75 grados. ¿Cuál es la dirección del negativo del vector A?
+
+R = \ang{255}
+\item Los vectores concurrentes son aquellos que:
+
+R = Las líneas de acción de los vectores se intersectan.
+\item El trazo del ángulo que determina la dirección de un vector se realiza:
+
+R = En el sentido contrario de las manecillas del reloj.
+
+\item Si un vector tiene una dirección de 500 grados, ¿En qué cuadrante del sistema coordenado cartesiano se encuentra?
+
+R = En el cuadrante II
+
+\item ¿Qué es medir?
+
+R = Comparar una magnitud con un patrón.
+
+\item Es una cantidad medible de un sistema físico a la que se le pueden asignar distintos valores como resultado de una medición o una relación de medidas:
+
+R = Magnitud física.
+
+\item En operaciones de base 10 con exponente negativo, el resultado es igual a:
+
+R = Recorrer hacia la derecha el punto decimal tantas veces lo indique el exponente.
+
+\item Se diseña un cubo de lado 1 pie, se desea llenar a la mitad del cubo con un líquido, ¿Qué volumen en metros cúbicos del líquido se debe de ocupar?
+
+R = \SI{1.415d-2}{\cubic\meter}
+\end{enumerate}
+
+
+
+
+\end{document}

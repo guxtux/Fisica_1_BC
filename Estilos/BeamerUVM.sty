@@ -1,0 +1,113 @@
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage{silence}
+%Disable all warnings issued by latex starting with "You have..."
+\WarningFilter{latex}{You have requested package}
+\ProvidesPackage{paqueteBeamer}[2021/02/06 Latex Package (Paquete Presentaciones Beamer UVM)]
+%Carga de paquetes y opciones
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[spanish]{babel}
+\RequirePackage{standalone}
+\RequirePackage{color}
+\RequirePackage[binary-units=true]{siunitx}
+\RequirePackage{hyperref}
+\RequirePackage[outdir=./]{epstopdf}
+\RequirePackage{anyfontsize}
+\RequirePackage{lmodern}
+\RequirePackage{xcolor,soul}
+\RequirePackage{etoolbox}
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{mathrsfs}
+\RequirePackage{mathtools}
+\RequirePackage{tcolorbox}
+\RequirePackage{physics}
+\RequirePackage{multicol}
+\RequirePackage{multirow}
+\RequirePackage{makecell}
+\RequirePackage{bookmark}
+\RequirePackage{longtable}
+\RequirePackage{listings}
+\RequirePackage{cancel}
+\RequirePackage{wrapfig}
+\RequirePackage{empheq}
+\RequirePackage{subfig}
+\RequirePackage{graphicx}
+\RequirePackage{multimedia}
+\RequirePackage{pdfpages}
+\RequirePackage{tikz}
+\usetikzlibrary{calc, patterns, matrix, backgrounds, decorations,shapes, arrows.meta, positioning, tikzmark}
+\RequirePackage[autostyle,spanish=mexican]{csquotes}
+\RequirePackage[os=win]{menukeys}
+\RequirePackage{pifont}
+\RequirePackage{pbox}
+\RequirePackage{bm}
+\RequirePackage{bigints}
+\RequirePackage{scalerel}
+\RequirePackage{caption}
+\captionsetup{font=scriptsize,labelfont=scriptsize}
+\spanishdecimal{.}
+
+%Sección de definición de nuevos comandos
+
+\newcommand*{\TitleParbox}[1]{\parbox[c]{1.75cm}{\raggedright #1}}%
+\newcommand{\python}{\texttt{python}}
+\newcommand{\textoazul}[1]{\textcolor{blue}{#1}}
+\newcommand{\azulfuerte}[1]{\textcolor{blue}{\textbf{#1}}}
+\newcommand{\funcionazul}[1]{\textcolor{blue}{\textbf{\texttt{#1}}}}
+\newcommand{\pderivada}[1]{\ensuremath{{#1}^{\prime}}}
+\newcommand{\sderivada}[1]{\ensuremath{{#1}^{\prime \prime}}}
+\newcommand{\tderivada}[1]{\ensuremath{{#1}^{\prime \prime \prime}}}
+\newcommand{\nderivada}[2]{\ensuremath{{#1}^{(#2)}}}
+\renewcommand{\arraystretch}{1.5}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+\renewcommand{\rmdefault}{cmr}% cmr = Computer Modern Roman
+
+\linespread{1.5}
+
+\usefonttheme{professionalfonts}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\spanishdecimal{.}
+
+\newcommand*{\boxcolor}{orange}
+\makeatletter
+\newcommand{\boxedcolor}[1]{\textcolor{\boxcolor}{%
+\tikz[baseline={([yshift=-1ex]current bounding box.center)}] \node [rectangle, minimum width=1ex, thick, rounded corners,draw] {\normalcolor\m@th$\displaystyle#1$};}}
+ \makeatother
+
+\newtcbox{\mybox}{on line,
+  colframe=mycolor,colback=mycolor!10!white,
+  boxrule=0.5pt,arc=4pt,boxsep=0pt,left=6pt,right=6pt,top=6pt,bottom=6pt}
+
+
+%Sección de datos para la portada de la presentación
+%con imágenes y fecha del día
+\author{M. en C. Ramón Gustavo Contreras Mayén}
+% \date{\today}
+% \institute{Universidad del Valle de México}
+\titlegraphic{\includegraphics[width=2.75cm]{./Imagenes/logo_UVM.png}}
+
+\setbeamertemplate{navigation symbols}{}
+
+\newcommand{\Cancel}[2][black]{{\color{#1}\cancel{\color{black}#2}}}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+\def\scaleint#1{\vcenter{\hbox{\scaleto[3ex]{\displaystyle\int}{#1}}}}
+\def\scaleoint#1{\vcenter{\hbox{\scaleto[3ex]{\displaystyle\oint}{#1}}}}
+\def\scaleiiint#1{\vcenter{\hbox{\scaleto[3ex]{\displaystyle\iiint}{#1}}}}
+\def\bs{\mkern-12mu}

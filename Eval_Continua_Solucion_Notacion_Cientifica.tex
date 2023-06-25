@@ -1,0 +1,134 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=fraction]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Ejercicios de Notación Científica \\  Solución - Curso de Física 1\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item \textbf{(0.4) puntos.} Escribe las siguientes cifras en notación científica:
+\begin{enumerate}
+\item $16200000000000 = \num{1.62d13}$
+\item $0.00000045 = \num{4.5d-7}$
+\item $0.00000000123 = \num{1.23d-9}$
+\item $384500000000000 = \num{3.845d14}$
+\end{enumerate}
+\item \textbf{(0.1) punto.} La velocidad de la luz en el vacío es de \SI[per-mode=symbol]{300000}{\kilo\meter\per\second}. Escribe en notación científica esta cifra pero expresada en pulgadas por segundo.
+
+Para responder este ejercicio necesitamos los factores de conversión:
+\begin{align*}
+\SI{1}{\kilo\meter} &= \SI{d3}{\meter} \\
+1 \, \text{pulgada} &= \SI{2.54d-2}{\meter}
+\end{align*}
+
+Ya podemos ocupar los factores de conversión:
+\begin{align*}
+\SI{3d5}{\kilo\meter\per\second} \, &\left( \dfrac{\SI{d3}{\meter}}{\SI{1}{\kilo\meter}} \right) \, \left( \dfrac{1 \, \text{pulgada}}{\SI{2.54d-2}{\meter}} \right) = \dfrac{\SI{3d8}{\meter} \, \text{pulgadas}}{\SI{2.54d-2}{\meter}} = \\[0.5em]
+&= \num{1.1811d10} \, \dfrac{\text{pulgadas}}{\unit{\second}}
+\end{align*}
+\item \textbf{(0.5) puntos.} Realiza las siguientes operaciones con números en notación científica:
+\begin{enumerate}
+\item (\num{3.4d23})(\num{1.1d11}) = \\[0.5em]
+$= (3.4 \cdot 1.1)(10^{23+11}) = \num{3.74d34}$
+\item (\num{2.45d-12})(\num{2.45d-4}) = \\[0.5em]
+$= (2.45 \cdot 2.45)(10^{-12+(-4)}) = \num{6.00254d-16}$
+\item (\num{4.56d11})(\num{0.655d-20}) = \\[0.5em]
+$= (4.56 \cdot 0.655)(10^{11+(-20)}) = \num{2.986d-9}$
+\item $\dfrac{\num{2.2d5}}{\num{0.6d45}} = \left( \dfrac{2.2}{0.6} \right) (10^{5-45}) = \num{3.666d-40}$
+\item $\dfrac{\num{0.68d-8}}{\num{1.9d-13}}= \left( \dfrac{0.68}{1.9} \right) (10^{-8-(-13)}) = \num{0.3578d5} = \\[0.5em]
+= \num{3.578d4}$
+\end{enumerate}
+\item \textbf{(0.4) puntos.} Realiza las siguientes operaciones con números en notación científica:
+
+Toma en cuenta que el ejercicio no indica cuál valor será la referencia para dejar los exponentes de la base al mismo valor, puedes usar la regla (no oficial) de ocupar el valor del exponente mayor como referencia.
+\begin{enumerate}
+\item \num{3.33d4} + \num{4.5d3} = \\[0.5em]
+$= \num{3.33d4} + \num{0.45d4} = (3.33 + 0.45) \times 10^{4} = \num{3.78d4}$
+\item \num{2.36d-2} + \num{3.68d-5} = \\[0.5em]
+$= \num{2.36d-2} + \num{0.00368d-2} = (2.36 + 0.00368) \times 10^{-2} = \\[0.5em]
+= \num{2.36d-2}$
+\item \num{4.44d-7} + \num{3.8d6} = \\[0.5em]
+$= \num{0.000000444d6} + \num{3.8d6} = (0.000000444 + 3.8) \times 10^{6} = \\[0.5em]
+= \num{3.8d6}$
+\item \num{1.3d8} + \num{2.5d10} = \\[0.5em]
+$= \num{0.013d10} + \num{2.5d10} = (0.013 + 2.5) \times 10^{10} = \\[0.5em]
+= \num{2.513d10}$
+\end{enumerate}
+\item \textbf{(0.6) puntos.} Realiza las siguientes operaciones con números en notación científica:
+\begin{enumerate}
+\itemsep1em
+\item $\dfrac{(\num{3.12d-5} + \num{7.03d-4})(\num{8.3d8})}{\num{4.32d3}} =$ \\[0.5em]
+$= \dfrac{(\num{0.312d-4} + \num{7.03d-4})(\num{8.3d8})}{\num{4.32d3}} = \\[0.5em]
+= \dfrac{(\num{7.342d-4})(\num{8.3d8})}{\num{4.32d3}} = \\[0.5em]
+= \dfrac{(7.342 \cdot 8.3) \times 10^{-4+8}}{\num{4.32d3}} = \\[0.5em]
+= \dfrac{\num{60.93d4}}{\num{4.32d3}} = \dfrac{\num{6.093d5}}{\num{4.32d3}} = \left( \dfrac{6.093}{4.32} \right) \times 10^{5-3} = \num{1.41d2}$
+\item $\dfrac{\num{5.431d3} - \num{6.51d4} + \num{385.10d2}}{\num{8.2d-3} - \num{2.10d-4}} =$ \\[0.5em]
+$= \dfrac{\num{0.5431d4} - \num{6.51d4} + \num{3.851d4}}{\num{8.2d-3} - \num{0.210d-3}} = \\[0.5em]
+= \dfrac{ (0.5431 - 6.51 + 3.851) \times 10^{4}}{(8.2 - 0.210) \times 10^{-3}} = \\[0.5em] 
+= \dfrac{-\num{2.115d4}}{\num{7.99d-3}} = \left( \dfrac{-2.115}{7.99} \right) \times 10^{4-(-3)} = \\[0.5em]
+= -\num{0.2647d7} = -\num{2.647d6}$
+\item $\dfrac{(\num{12.5d7} - \num{8.10d9})(\num{3.5d-5} + 185)}{\num{9.2d6}} = $ \\[0.5em]
+$= \dfrac{(\num{0.125d9} - \num{8.10d9})(\num{3.5d-5} + \num{1.85d2})}{\num{9.2d6}} = \\[0.5em]
+= \dfrac{\left[ (0.125 - 8.10) \times 10^{9} \right] (\num{0.00000035d2} + \num{1.85d2})}{\num{9.2d6}} = \\[0.5em]
+= \dfrac{(\num{-7.975d9}) (\num{1.85d2})}{\num{9.2d6}} =  \dfrac{(-7.975 \cdot 1.85) \times 10^{9+2}}{\num{9.2d6}}\\[0.5em]
+= \dfrac{-\num{14.753d11}}{\num{9.2d6}} = \left( \dfrac{-14.753}{9.2} \right) \times 10^{11-6} = \\[0.5em]
+= \num{-1.603d5}$
+\item $\dfrac{(\num{3d6})(\num{8d-2})}{(\num{2d7}) (a)} = \num{2d-18}$ \quad Obtén el valor de $a$.
+\item El diámetro de un virus es de \SI{5d-4}{\milli\meter}. ¿Cuántos de esos virus son necesarios para rodear a la Tierra?. Considera que el radio medio de la Tierra es de \SI{6370}{\kilo\meter}.
+
+Para resolver este ejercicio necesitamos la siguiente información:
+\begin{enumerate}
+\item Definimos la longitud de un virus como $d_{v} = \SI{5d-4}{\nano\meter}$
+\item La relación: \SI{d3}{\milli\meter} = \SI{1}{\meter}, expresamos la longitud de un virus en metros:
+\begin{align*}
+\SI{5d-4}{\milli\meter} \left( \dfrac{\SI{d-3}{\meter}}{\SI{1}{\milli\meter}} \right) = \SI{5d-7}{\meter}
+\end{align*}
+\item La circunferencia de la Tierra en metros: $C = 2 \pi r$, donde el radio medio de la Tierra es $r = \SI{6370}{\kilo\meter}$, pero hay que expresarla en metros: \SI{6.37d6}{\meter}
+\end{enumerate}
+
+El número de virus $N$, será entonces:
+\begin{align*}
+N = \dfrac{C}{d_{v}} &= \dfrac{2 \, \pi \cdot \SI{6.37d6}{\meter}}{\SI{5d-7}{\meter}} = \left( \dfrac{40.02}{5} \right) \times 10^{6-(-7)} = \\[0.5em]
+&= \num{8.004d13} \,\, \text{virus}
+\end{align*}
+\item La velocidad de la luz es \SI[per-mode=symbol]{3d8}{\meter\per\second}. ¿Qué distancia en \unit{\kilo\meter} recorre la luz en un año?. La expresión que relaciona la velociad ($v$) con la distancia $d$ y el tiempo $t$, es:
+\begin{align*}
+v = \dfrac{d}{t}
+\end{align*}
+Ya conocemos la equivalencia entre \SI{1}{\kilo\meter} = \SI{d3}{\meter}, nos faltaría la equivalencia en segundos de un año (suponiendo que tiene 365 días):
+\begin{align*}
+1 \,\, \text{año} = \SI{3.153d7}{\second}
+\end{align*}
+Ahora ocupamos la expresión para calcular la distancia:
+\begin{align*}
+d &= v \, t = \left(\SI{3d8}{\meter\per\second} \right) \left(\SI{3.153d7}{\second} \right) = \\[0.5em]
+&= (3 \cdot 3.153) \times 10^{8+7} = \SI{9.459d15}{\meter}
+\end{align*}
+Lo que nos falta es multiplicar el factor de conversión de metros a kilómetros:
+\begin{align*}
+\left(\SI{9.459d15}{\meter}\right)  \left( \dfrac{\SI{1}{\kilo\meter}}{\SI{1d3}{\meter}} \right) = \SI{9.459d12}{\kilo\meter}
+\end{align*}
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
