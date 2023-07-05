@@ -1,0 +1,87 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Ejercicios de Vectores \\  Curso de Física 1\vspace{-5ex}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Ejercicios a cuenta}
+
+\subsection{Ejercicio 1}
+
+Realiza la suma de los siguientes tres vectores, determinando el vector resultante y el ángulo que forma la resultante con respecto al eje $x$ positivo.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.3]
+    \draw (-6, 0) -- (2, 0);
+    \draw (0, -2) -- (0, 1.5);
+    \draw [-stealth, line width=0.5mm, color=ao] (0, 0) -- (1.69, 0.61) node [above, pos=1.2] {\small{$T_{1} = \SI{18}{\newton}$}};
+    \draw [color=ao] (0.5, 0) arc(0:20:0.4);
+    \node at (2, 0.2) [color=ao] {\small{$\theta_{1} = \ang{20}$}};
+
+    \draw [-stealth, line width=0.5mm, color=darkmagenta] (0, 0) -- (-5.6, 0) node [above, near end] {\small{$T_{3} = \SI{58}{\newton}$}};
+    \draw [color=darkmagenta] (0.4, 0) arc(0:180:0.5);
+    \node at (-1.5, 0.4) [color=darkmagenta] {\small{$\theta_{3} = \ang{180}$}};
+    
+    \draw [-stealth, line width=0.5mm, color=officegreen] (0, 0) -- (0.306, -0.629) node [above, xshift=0.5cm, yshift=-0.7cm] {\small{$T_{2} = \SI{7}{\newton}$}};
+    \draw [color=officegreen] (0.3, 0) arc(360:296:0.3);
+    \node at (1.3, -0.4) [color=officegreen] {\small{$\theta_{2} = \ang{64}$}};
+\end{tikzpicture}
+\end{figure}
+
+\newpage
+
+\subsection{Ejercicio 2}
+
+Realiza la suma de los vectores que se muestran en la siguiente figura, calculando la magnitud del vector resultante, así como la dirección del mismo.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1]
+    \draw (-4, 0) -- (5, 0);
+    \draw (0, -9) -- (0, 5);
+    \draw [-stealth, line width=0.5mm, color=carmine] (0, 0) -- (4.17, 4.17) node [above, pos=1] {\small{$F_{1} = \SI{59}{\newton}$}};
+    \draw [color=carmine] (0.5, 0) arc(0:45:0.5);
+    \node at (2.5, 0.3) [color=carmine] {\small{$\theta_{1} = \ang{45}$}};
+
+    \draw [-stealth, line width=0.5mm, color=electricindigo] (0, 0) -- (1.97, -1.18) node [above, xshift=0.8cm, yshift=-0.7cm] {\small{$F_{2} = \SI{23}{\newton}$}};
+    \draw [color=electricindigo] (0.5, 0) arc(360:329:0.5);
+    \node at (2.8, -0.5) [color=electricindigo] {\small{$\theta_{2} = \ang{31}$}};
+    
+    \draw [-stealth, line width=0.5mm, color=officegreen] (0, 0) -- (-0.919, -8.75) node [left, midway] {\small{$F_{3} = \SI{88}{\newton}$}};
+    \draw [color=officegreen] (-0.5, 0) arc(180:264:0.5);
+    \node at (-2, -0.5) [color=officegreen] {\small{$\theta_{3} = \ang{84}$}};
+
+    \draw [-stealth, line width=0.5mm, color=persimmon] (0, 0) -- (-0.745, 1.52) node [above, xshift=-1cm, yshift=-0.2cm] {\small{$F_{4} = \SI{17}{\newton}$}};
+    \draw [thick, color=persimmon] (-0.5, 0) arc(180:116:0.5);
+    \node at (-2, 0.5) [color=persimmon] {\small{$\theta_{4} = \ang{64}$}};
+\end{tikzpicture}
+\end{figure}
+
+Cada ejercicio aporta un punto en Evaluación Continua. La solución de enviará por Teams, el plazo vence el domingo 2 de julio a las 8 pm.
+
+
+No se recibirán trabajos extemporáneos, a menos que se tenga la evidencia de problemas durante el envío, y que hayan sido notificados al momento, tanto en la Coordinación Académica como al Profesor.
+\end{document}
