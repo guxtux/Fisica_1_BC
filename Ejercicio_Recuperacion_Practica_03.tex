@@ -1,0 +1,76 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Ejercicio Recuperación Práctica 3 - Física 1\vspace{-5ex}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Ejercicios a resolver.}
+
+\subsection{Ejercicio 1.}
+
+En una persecución policial, el automóvil en fuga inicia con los siguientes desplazamientos:
+\begin{enumerate}
+\item $d_{1} = \SI{120}{\meter}, \theta = \ang{10}$
+\item $d_{2} = \SI{900}{\meter}, \theta = \ang{100}$
+\item $d_{3} = \SI{700}{\meter}, \theta = \ang{200}$
+\item $d_{4} = \SI{500}{\meter}, \theta = \ang{300}$
+\end{enumerate}
+Si una patrulla está en la posición donde inició el automóvil la fuga. ¿Cuál es el desplazamiento que tiene que realizar la patrulla par encontrarse con el automóvil que se dio a la fuga?
+\\
+Determina con el método analítico, el valor del desplazamiento resultante y su ángulo con respecto al eje $x$ positivo.
+
+\subsection{Ejercicio 2.}
+
+Del siguiente sistema de vectores, calcula el vector resultante y el ángulo del mismo. Presenta las tablas correspondientes a los vectores y de sus componentes.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1]
+\draw [-stealth] (-10, 0) -- (5, 0) node [above, pos=1] {\small{$x$}};
+\draw [-stealth] (0, -7) -- (0, 7) node [left, pos=1] {\small{$y$}};
+\draw [-stealth, thick, color=red] (0, 0) -- (3.87, 2.32 ) node [above, pos=1] {\small{$\vb{v}_{1} = \SI{59}{\meter\per\second}$}};
+\draw [color=red] (0.5, 0) arc(0:39:0.5);
+\node at (2.5, 0.3) [color=red] {\small{$\theta_{1} = \ang{39}$}};
+
+\draw [-stealth, thick, color=regalia] (0, 0) -- (2.16, -6.65) node [above, near end, rotate=-72] {\small{$\vb{v}_{2} = \SI{70}{\meter\per\second}$}};
+\draw [color=regalia] (0.5, 0) arc(360:288:0.5);
+\node at (2.5, -0.8) [color=regalia] {\small{$\theta_{2} = \ang{72}$}};
+
+\draw [-stealth, thick, color=rosewood] (0, 0) -- (-9.45, -3.25) node [below, near end, rotate=19] {\small{$\vb{v}_{3} = \SI{100}{\meter\per\second}$}};
+\draw [color=rosewood] (-0.5, 0) arc(180:199:0.5);
+\node at (-3.5, -0.5) [color=rosewood] {\small{$\theta_{3} = \ang{19}$}};
+
+\draw [-stealth, thick, color=ultramarine] (0, 0) -- (-5.2, 0) node [above, near end] {\small{$\vb{v}_{4} = \SI{52}{\meter\per\second}$}};
+
+\draw [-stealth, thick, color=persimmon] (0, 0) -- (-1.04, 6.61) node [near end, xshift=-0.2cm, yshift=-0.5cm, rotate=-81] {\small{$\vb{v}_{5} = \SI{67}{\meter\per\second}$}};
+\draw [thick, color=persimmon] (-0.5, 0) arc(180:99:0.5);
+\node at (-2.3, 4) [rotate=-81, color=persimmon] {\small{$\theta_{5} = \ang{81}$}};
+\draw [-stealth, color=persimmon] (-2, 2.6) -- (-0.6, 0.5);
+\end{tikzpicture}
+\end{figure}
+  
+
+\end{document}

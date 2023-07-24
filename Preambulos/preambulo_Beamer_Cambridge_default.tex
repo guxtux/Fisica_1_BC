@@ -1,0 +1,44 @@
+%Sección para el tema de beamer, con el theme, usercolortheme y sección de footers
+\usetheme{CambridgeUS}
+\usecolortheme{default}
+%\useoutertheme{default}
+\setbeamercovered{invisible}
+% or whatever (possibly just delete it)
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamertemplate{subsection in toc}{\leavevmode\leftskip=3.2em\rlap{\hskip-2em\inserttocsectionnumber.\inserttocsubsectionnumber}\inserttocsubsection\par}
+\setbeamercolor{section in toc}{fg=blue}
+\setbeamercolor{subsection in toc}{fg=blue}
+\setbeamercolor{frametitle}{fg=blue}
+\setbeamertemplate{caption}[numbered]
+
+\setbeamertemplate{footline}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{headline}{}
+
+
+\makeatletter
+\setbeamercolor{secºtion in foot}{bg=gray!30, fg=black!90!orange}
+\setbeamercolor{subsection in foot}{bg=blue!30!yellow, fg=red}
+\setbeamercolor{date in foot}{bg=black, fg=white}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{section in foot}%
+    \usebeamerfont{section in foot} \insertsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in foot}%
+    \usebeamerfont{subsection in foot}  \insertsubsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot} \insertshortdate{} \hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber \hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+
+
+

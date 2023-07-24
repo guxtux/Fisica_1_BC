@@ -1,0 +1,245 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Ejercicios de Vectores \\  Curso de Física 1\vspace{-5ex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Ejercicios a cuenta}
+
+\subsection{Ejercicio 1}
+
+Realiza la suma de los siguientes tres vectores, determinando el vector resultante y el ángulo que forma la resultante con respecto al eje $x$ positivo.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.3]
+    \draw (-6, 0) -- (2, 0);
+    \draw (0, -2) -- (0, 1.5);
+    \draw [-stealth, line width=0.5mm, color=ao] (0, 0) -- (1.69, 0.61) node [above, pos=1.2] {\small{$T_{1} = \SI{18}{\newton}$}};
+    \draw [color=ao] (0.5, 0) arc(0:20:0.4);
+    \node at (2, 0.2) [color=ao] {\small{$\theta_{1} = \ang{20}$}};
+
+    \draw [-stealth, line width=0.5mm, color=darkmagenta] (0, 0) -- (-5.6, 0) node [above, near end] {\small{$T_{3} = \SI{58}{\newton}$}};
+    \draw [color=darkmagenta] (0.4, 0) arc(0:180:0.5);
+    \node at (-1.5, 0.4) [color=darkmagenta] {\small{$\theta_{3} = \ang{180}$}};
+    
+    \draw [-stealth, line width=0.5mm, color=officegreen] (0, 0) -- (0.306, -0.629) node [above, xshift=0.5cm, yshift=-0.7cm] {\small{$T_{2} = \SI{7}{\newton}$}};
+    \draw [color=officegreen] (0.3, 0) arc(360:296:0.3);
+    \node at (1.3, -0.4) [color=officegreen] {\small{$\theta_{2} = \ang{64}$}};
+\end{tikzpicture}
+\end{figure}
+\textbf{Solución:}
+
+Presentamos la tabla donde identificamos a cada vector en su cuadrante:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c | c | c | c}
+        Vector & Cuadrante & Magnitud (\unit{\newton}) & Ángulo \\ \hline
+        $T_{1}$ & I & $18$ & \ang{20} \\ \hline
+        $T_{2}$ & IV & $7$ & \ang{64} \\ \hline
+        $T_{3}$ & II / III & $58$ & \ang{180} \\ \hline        
+    \end{tabular}
+\end{table}
+Ahora ya podemos calcular las componentes en el eje $x$ y en el eje $y$ de cada vector:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c | c | c | c}
+        Componente & Expresión & Sustitución & Valor \\ \hline
+        $T_{1x}$ & $\cos \theta_{1} \, T_{1}$ & ($\cos \ang{20}) \, (\SI{18}{\newton})$ & \SI{16.91}{\newton} \\ \hline
+        $T_{1y}$ & $\sin \theta_{1} \, T_{1}$ & ($\sin \ang{20}) \, (\SI{18}{\newton})$ & \SI{6.15}{\newton} \\ \hline
+        $T_{2x}$ & $\cos \theta_{2} \, T_{2}$ & ($\cos \ang{64}) \, (\SI{7}{\newton})$ & \SI{3.06}{\newton} \\ \hline
+        $T_{2y}$ & $-\sin \theta_{2} \, T_{2}$ & $-(\sin \ang{64}) \, (\SI{7}{\newton})$ & $-\SI{6.29}{\newton}$ \\ \hline        
+        $T_{3x}$ & $-\cos \theta_{3} \, T_{3}$ & $-(\cos \ang{180}) \, (\SI{58}{\newton})$ & $-\SI{58}{\newton}$ \\ \hline
+        $T_{3y}$ & $\sin \theta_{3} \, T_{3}$ & ($\sin \ang{180}) \, (\SI{58}{\newton})$ & $0$ \\ \hline        
+    \end{tabular}
+\end{table}
+Ocupamos la expresión para obtener la componente en cada eje de la Resultante:
+\begin{align*}
+R_{x} &= \sum_{i=1}^{3} T_{ix} = \SI{16.91}{\newton} + \SI{3.06}{\newton} + (-\SI{58}{\newton}) = -\SI{38.03}{\newton} \\[0.75em]
+R_{y} &= \sum_{i=1}^{3} T_{iy} = \SI{6.15}{\newton} + (-\SI{6.29}{\newton}) + 0 = -\SI{0.14}{\newton}
+\end{align*}
+Con estas dos componentes, calculamos la magnitud del vector resultante:
+\begin{align*}
+R &= \sqrt{(R_{x})^{2} + (R_{y})^{2}} = \sqrt{(-\SI{38.03}{\newton})^{2} + (-\SI{0.14}{\newton})^{2}} = \\[0.5em]
+R &= \sqrt{\SI{1450.08}{\square\newton} + \SI{0.0196}{\square\newton}} = \sqrt{\SI{1450.09}{\square\newton}} = \\[0.5em]
+R &= \SI{38.08}{\newton}
+\end{align*}
+El ángulo del vector resultante, lo obtenemos de:
+\begin{align*}
+\tan \theta_{R} = \dfrac{R_{y}}{R_{x}} = \dfrac{-\SI{0.14}{\newton}}{-\SI{38.03}{\newton}} = 0.00368 \\[0.5em]
+\end{align*}
+Aplicamos la función inversa $\arctan$ en ambos lados de la igualdad para recuperar el valor del ángulo:
+\begin{align*}
+\arctan(\tan \theta_{R}) &= \arctan(0.00368) = \\[0.5em]
+\theta_{R} &= \tan^{-1} (0.00368) = \\[0.5em]
+\theta_{R} &= \ang{0.21}
+\end{align*}
+Identificamos en qué cuadrante se encuentra el vector resultante, a partir de los valores de $R_{x}$ y de $R_{y}$, como ambos valores son negativos: $R_{x} < 0$ y $R_{y} < 0$, entonces el vector resultante $\va{R}$ está en el cuadrante III.
+\par
+El valor del ángulo $\theta_{R}$ con respecto al eje $x$ positivo, se obtiene al sumar $\ang{180}$ y el ángulo $\theta_{R}$, es decir:
+\begin{align*}
+\varphi = \ang{180} + \ang{0.21} = \ang{180.21}
+\end{align*}
+A continuación se presenta el vector resultante en el sistema de vectores.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=1.3]
+    \draw (-6, 0) -- (2, 0);
+    \draw (0, -2) -- (0, 1.5);
+    \draw [-stealth, line width=0.5mm, color=ao] (0, 0) -- (1.69, 0.61) node [above, pos=1.2] {\small{$T_{1}$}};
+    % \draw [color=ao] (0.5, 0) arc(0:20:0.4);
+    % \node at (2, 0.2) [color=ao] {\small{$\theta_{1} = \ang{20}$}};
+
+    \draw [-stealth, line width=0.5mm, color=darkmagenta] (0, 0) -- (-5.6, 0) node [above, near end] {\small{$T_{3}$}};
+    % \draw [color=darkmagenta] (0.4, 0) arc(0:180:0.5);
+    % \node at (-1.5, 0.4) [color=darkmagenta] {\small{$\theta_{3} = \ang{180}$}};
+    
+    \draw [-stealth, line width=0.5mm, color=officegreen] (0, 0) -- (0.306, -0.629) node [above, xshift=0.5cm, yshift=-0.7cm] {\small{$T_{2}$}};
+    % \draw [color=officegreen] (0.3, 0) arc(360:296:0.3);
+    % \node at (1.3, -0.4) [color=officegreen] {\small{$\theta_{2} = \ang{64}$}};
+
+    \draw [-stealth, line width=0.8mm, color=red] (0, 0) -- (-3.8, -0.014) node [above, xshift=0.5cm, yshift=-0.7cm] {\small{$R = \SI{38.08}{\newton}$}};
+    \draw [color=red, thick] (0.3, 0) arc(0:180.21:0.3);
+    \node at (-1.3, 0.4) [color=red] {\small{$\varphi = \ang{180.21}$}};
+\end{tikzpicture}
+\end{figure}
+De esta manera hemos completado el ejercicio.
+
+\newpage
+
+\subsection{Ejercicio 2}
+
+Realiza la suma de los vectores que se muestran en la siguiente figura, calculando la magnitud del vector resultante, así como la dirección del mismo.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1]
+    \draw (-4, 0) -- (5, 0);
+    \draw (0, -9) -- (0, 5);
+    \draw [-stealth, line width=0.5mm, color=carmine] (0, 0) -- (4.17, 4.17) node [above, pos=1] {\small{$F_{1} = \SI{59}{\newton}$}};
+    \draw [color=carmine] (0.5, 0) arc(0:45:0.5);
+    \node at (2.5, 0.3) [color=carmine] {\small{$\theta_{1} = \ang{45}$}};
+
+    \draw [-stealth, line width=0.5mm, color=electricindigo] (0, 0) -- (1.97, -1.18) node [above, xshift=0.8cm, yshift=-0.7cm] {\small{$F_{2} = \SI{23}{\newton}$}};
+    \draw [color=electricindigo] (0.5, 0) arc(360:329:0.5);
+    \node at (2.8, -0.5) [color=electricindigo] {\small{$\theta_{2} = \ang{31}$}};
+    
+    \draw [-stealth, line width=0.5mm, color=officegreen] (0, 0) -- (-0.919, -8.75) node [left, midway] {\small{$F_{3} = \SI{88}{\newton}$}};
+    \draw [color=officegreen] (-0.5, 0) arc(180:264:0.5);
+    \node at (-2, -0.5) [color=officegreen] {\small{$\theta_{3} = \ang{84}$}};
+
+    \draw [-stealth, line width=0.5mm, color=persimmon] (0, 0) -- (-0.745, 1.52) node [above, xshift=-1cm, yshift=-0.2cm] {\small{$F_{4} = \SI{17}{\newton}$}};
+    \draw [thick, color=persimmon] (-0.5, 0) arc(180:116:0.5);
+    \node at (-2, 0.5) [color=persimmon] {\small{$\theta_{4} = \ang{64}$}};
+\end{tikzpicture}
+\end{figure}
+
+\textbf{Solución:}
+
+Nuevamente hacemos una tabla para identificar en qué cuadrante se encuentran los vectores del sistema:
+\begin{table}
+    \centering
+    \begin{tabular}{c | c | c | c}
+        Vector & Cuadrante & Magnitud (\unit{\newton}) & Ángulo \\ \hline
+        $F_{1}$ & I & $59$ & \ang{45} \\ \hline
+        $F_{2}$ & IV & $23$ & \ang{31} \\ \hline
+        $F_{3}$ & III & $88$ & \ang{84} \\ \hline        
+        $F_{4}$ & II & $17$ & \ang{64} \\ \hline        
+    \end{tabular}
+\end{table}
+Calculamos las componentes en el eje $x$ y en el eje $y$ de cada vector:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c | c | c | c}
+        Componente & Expresión & Sustitución & Valor \\ \hline
+        $F_{1x}$ & $\cos \theta_{1} \, F_{1}$ & ($\cos \ang{45}) \, (\SI{59}{\newton})$ & \SI{41.71}{\newton} \\ \hline
+        $F_{1y}$ & $\sin \theta_{1} \, F_{1}$ & ($\sin \ang{45}) \, (\SI{59}{\newton})$ & \SI{41.71}{\newton} \\ \hline
+        $F_{2x}$ & $\cos \theta_{2} \, F_{2}$ & ($\cos \ang{31}) \, (\SI{23}{\newton})$ & \SI{19.71}{\newton} \\ \hline
+        $F_{2y}$ & $-\sin \theta_{2} \, F_{2}$ & $-(\sin \ang{31}) \, (\SI{23}{\newton})$ & $-\SI{11.84}{\newton}$ \\ \hline
+        $F_{3x}$ & $-\cos \theta_{3} \, F_{3}$ & $-(\cos \ang{84}) \, (\SI{88}{\newton})$ & $-\SI{9.19}{\newton}$ \\ \hline
+        $F_{3y}$ & $-\sin \theta_{3} \, F_{3}$ & -($\sin \ang{84}) \, (\SI{88}{\newton})$ & $-\SI{87.51}{\newton}$ \\ \hline
+        $F_{4x}$ & $-\cos \theta_{4} \, F_{4}$ & $-(\cos \ang{64}) \, (\SI{17}{\newton})$ & $-\SI{7.45}{\newton}$ \\ \hline
+        $F_{4y}$ & $\sin \theta_{4} \, F_{4}$ & -($\sin \ang{64}) \, (\SI{17}{\newton})$ & $\SI{15.27}{\newton}$ \\ \hline        
+    \end{tabular}
+\end{table}
+Ocupamos la expresión para obtener la componente en cada eje de la Resultante:
+\begin{align*}
+R_{x} &= \sum_{i=1}^{4} F_{ix} = \SI{41.71}{\newton} + \SI{19.71}{\newton} + (-\SI{9.19}{\newton}) + (-\SI{7.45}{\newton}) = \SI{44.78}{\newton} \\[0.75em]
+R_{y} &= \sum_{i=1}^{4} F_{iy} = \SI{41.71}{\newton} + (-\SI{11.84}{\newton}) + (-\SI{87.51}{\newton}) + (\SI{15.27}{\newton}) = -\SI{42.37}{\newton}
+\end{align*}
+Con estas dos componentes, calculamos la magnitud del vector resultante:
+\begin{align*}
+R &= \sqrt{(R_{x})^{2} + (R_{y})^{2}} = \sqrt{(\SI{44.78}{\newton})^{2} + (-\SI{42.37}{\newton})^{2}} = \\[0.5em]
+R &= \sqrt{\SI{2005.24}{\square\newton} + \SI{1795.21}{\square\newton}} = \sqrt{\SI{3800.45}{\square\newton}} = \\[0.5em]
+R &= \SI{61.64}{\newton}
+\end{align*}
+
+Revisando los valores de $R_{x} > 0$ y $R_{y} < 0$, reconocemos que el vector resultante está en el cuadrante IV, por lo que nos faltaría calcular el ángulo de su dirección.
+
+El ángulo $\theta_{R}$ del vector resultante, lo obtenemos de:
+\begin{align*}
+\tan \theta_{R} = \dfrac{R_{y}}{R_{x}} = \dfrac{-\SI{42.37}{\newton}}{\SI{44.78}{\newton}} = -0.9461 \\[0.5em]
+\end{align*}
+Aplicamos la función inversa $\arctan$ en ambos lados de la igualdad para recuperar el valor del ángulo:
+\begin{align*}
+\arctan(\tan \theta_{R}) &= \arctan(-0.9461) = \\[0.5em]
+\theta_{R} &= \tan^{-1} (-0.9461) = \\[0.5em]
+\theta_{R} &= -\ang{43.41}
+\end{align*}
+El ángulo obtenido se mide en el sentido horario de las manecillas del reloj, por lo que su trazo sería como el que se muestra en la siguiente figura:
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1]
+    \draw (-4, 0) -- (5, 0);
+    \draw (0, -9) -- (0, 5);
+    \draw [-stealth, line width=0.5mm, color=carmine] (0, 0) -- (4.17, 4.17) node [above, pos=1] {\small{$F_{1}$}};
+    % \draw [color=carmine] (0.5, 0) arc(0:45:0.5);
+    % \node at (2.5, 0.3) [color=carmine] {\small{$\theta_{1} = \ang{45}$}};
+
+    \draw [-stealth, line width=0.5mm, color=electricindigo] (0, 0) -- (1.97, -1.18) node [above, xshift=0.8cm, yshift=-0.7cm] {\small{$F_{2}$}};
+    % \draw [color=electricindigo] (0.5, 0) arc(360:329:0.5);
+    % \node at (2.8, -0.5) [color=electricindigo] {\small{$\theta_{2} = \ang{31}$}};
+    
+    \draw [-stealth, line width=0.5mm, color=officegreen] (0, 0) -- (-0.919, -8.75) node [left, midway] {\small{$F_{3}$}};
+    % \draw [color=officegreen] (-0.5, 0) arc(180:264:0.5);
+    % \node at (-2, -0.5) [color=officegreen] {\small{$\theta_{3} = \ang{84}$}};
+
+    \draw [-stealth, line width=0.5mm, color=persimmon] (0, 0) -- (-0.745, 1.52) node [above, xshift=-1cm, yshift=-0.2cm] {\small{$F_{4}$}};
+    % \draw [thick, color=persimmon] (-0.5, 0) arc(180:116:0.5);
+    % \node at (-2, 0.5) [color=persimmon] {\small{$\theta_{4} = \ang{64}$}};
+    
+    \draw [-stealth, line width=0.8mm, color=red] (0, 0) -- (3.83, -3.63) node [above, xshift=-1cm, yshift=-0.7cm] {\small{$R = \SI{61.64}{\newton}$}};
+    \draw [thick, color=red, thick] (0.5, 0) arc(360:316.58:0.5);
+    \node at (2, -0.3) [color=red] {\small{$\theta_{R} = \ang{43.41}$}};
+\end{tikzpicture}
+\end{figure}
+
+
+
+% Cada ejercicio aporta un punto en Evaluación Continua. La solución de enviará por Teams, el plazo vence el domingo 2 de julio a las 8 pm.
+
+
+% No se recibirán trabajos extemporáneos, a menos que se tenga la evidencia de problemas durante el envío, y que hayan sido notificados al momento, tanto en la Coordinación Académica como al Profesor.
+\end{document}

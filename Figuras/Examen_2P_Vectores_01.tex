@@ -1,0 +1,26 @@
+\documentclass[margin=5mm, tikz]{standalone}
+\usepackage[utf8x]{inputenc}
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{../Estilos/ColoresLatex}
+\begin{document}
+\begin{tikzpicture}
+
+        \draw [-stealth] (-3, 0) -- (5, 0) node [above, pos=1] {\small{$x$}};
+        \draw [-stealth] (0, -2) -- (0, 3) node [left, pos=1] {\small{$y$}};
+        \draw [-stealth, line width=0.5mm, color=ao] (0, 0) -- (0, 2.5) node [above, xshift=-1cm, yshift=-0.4cm] {\small{$F_{1} = \SI{2.5}{\newton}$}};
+            
+        \draw [-stealth, line width=0.5mm, color=darkmagenta] (0, 0) -- (2.71, 1.26) node [above, xshift=0.1cm, yshift=0.3cm] {\small{$F_{2} = \SI{3}{\newton}$}};
+        \draw [color=darkmagenta] (0.5, 0) arc(0:25:0.5);
+        \node at (1.8, 0.3) [color=darkmagenta] {\small{$\theta_{2} = \ang{25}$}};
+        
+        \draw [-stealth, line width=0.5mm, color=officegreen] (0, 0) -- (4, 0) node [above, xshift=-0.4cm, yshift=-0.7cm] {\small{$F_{3} = \SI{4}{\newton}$}};
+        % \draw [color=officegreen] (0.3, 0) arc(360:296:0.3);
+        % \node at (1.3, -0.4) [color=officegreen] {\small{$\theta_{2} = \ang{64}$}};
+        \draw [-stealth, line width=0.5mm, color=bole] (0, 0) -- (-1.53, -1.28) node [above, xshift=0.5cm, yshift=-0.7cm] {\small{$F_{4} = \SI{2}{\newton}$}};
+        \draw [color=bole] (-0.5, 0) arc(180:220:0.5);
+        \node at (-1.3, -0.3) [color=bole] {\small{$\theta_{4} = \ang{40}$}};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,278 @@
+\documentclass[14pt]{beamer}
+\usepackage{./Estilos/BeamerUVM}
+\usepackage{./Estilos/ColoresLatex}
+\input{Preambulos/preambulo_Beamer_Cambridge_default}
+% \usefonttheme{serif}
+\usepackage[clock]{ifsym}
+\DeclareSIUnit\erg{erg}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+\sisetup{per-mode=symbol}
+\resetcounteronoverlays{saveenumi}
+
+\title{\Large{5 - Mov. Uniformemente Acelerado} \\ \normalsize{Física 2}}
+\date{14 de julio de 2023}
+
+\begin{document}
+\maketitle
+
+\section*{Contenido}
+\frame{\frametitle{Contenido} \tableofcontents[currentsection, hideallsubsections]}
+
+\section{La Práctica}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Objetivo}
+
+\begin{frame}
+\frametitle{Objetivo de la Práctica}
+Determinar la velocidad de un balín deslizándose sobre un plano inclinado.
+\end{frame}
+
+\subsection{Material}
+
+\begin{frame}
+\frametitle{Material y equipo}
+\setbeamercolor{item projected}{bg=bananayellow,fg=blue}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Riel.
+\item Soporte con transportador.
+\item Una canica o balín.
+\item Masking tape.
+\item Cronómetro (del celular)
+\end{enumerate}
+\end{frame}
+
+\subsection{Montaje}
+
+\begin{frame}
+\frametitle{Montando el riel}
+\setbeamercolor{item projected}{bg=burgundy,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item El soporte debe de ajustarse de tal manera que se levanta a un ángulo de $\ang{5}$.
+\item Se coloca el riel sobre el soporte.
+\item La canica o balín debe de colocarse en la marca inicial del riel.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Registrando datos}
+\setbeamercolor{item projected}{bg=burgundy,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+    \begin{enumerate}[<+->]
+\conti    
+\item Se debe de registrar el tiempo que tarda en recorrer las marcas desde \SI{10}{\centi\meter}, \SI{20}{\centi\meter}, \SI{30}{\centi\meter}, hasta \SI{100}{\centi\meter}, es decir, cada hasta \SI{100}{\centi\meter}
+\item Se repite $5$ veces el registro de tiempo para cada marca de distancia.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Registrando datos}
+\setbeamercolor{item projected}{bg=burgundy,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+    \begin{enumerate}[<+->]
+\conti    
+\item Una vez completado el registro de tiempos, se levanta el riel a un ángulo de $\ang{10}$
+\item Se repite el procedimiento de registrar $5$ veces el tiempo para cada marca de distancia, de \SI{10}{\centi\meter} a \SI{100}{\centi\meter}
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Registrando datos}
+\setbeamercolor{item projected}{bg=burgundy,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+    \begin{enumerate}[<+->]
+\conti    
+\item Una vez completado el registro de tiempos, se levanta el riel a un ángulo de $\ang{20}$
+\item Se repite el procedimiento de registrar $5$ veces el tiempo para cada marca de distancia, de \SI{10}{\centi\meter} a \SI{100}{\centi\meter}
+\end{enumerate}
+\end{frame}
+
+\section{Analizando los datos}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Construyendo tablas}
+
+\begin{frame}
+\frametitle{Obteniendo los promedios de tiempo}
+Deben de calcular el tiempo promedio a partir de los $5$ registros que obtuvieron para cada marca de distancia.
+\end{frame}
+\begin{frame}
+\frametitle{Primera tabla}
+Deberán de completar una tabla con las siguientes variables:
+\begin{table}
+    \centering
+    \begin{tabular}{c | c}
+        Tiempo [\unit{\second}] & Velocidad [\unit{\meter}] \\ \hline
+         & \\ \hline       
+         & \\ \hline       
+    \end{tabular}
+\end{table}
+\end{frame}
+\begin{frame}
+\frametitle{Graficando los datos}
+Ahora vas a graficar los datos de la tabla anterior:
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw [-stealth] (0, 0) -- (5, 0) node [above, pos=1] {\small{$t \, [\unit{\second}]$}};
+        \draw [-stealth] (0, 0) -- (0, 3) node [left, pos=1] {\small{$d \, [\unit{\meter}]$}};
+    \end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Graficando los datos}
+Para cada conjunto de datos de las inclinaciones $\ang{5}, \ang{10}, \ang{15}$:
+\setbeamercolor{item projected}{bg=byzantine,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Anota solo el valor del par de datos $(d, t)$.
+\item Con una regla, traza una recta de tal manera que la línea esté muy cerca de cada dato.
+\item Calcula la pendiente de esa recta.
+\end{enumerate}
+\pause
+¿Qué nos dice la pendiente con respecto a la aceleración?
+\end{frame}
+\begin{frame}
+\frametitle{Segunda gráfica}
+Elabora una gráfica por cada ángulo de inclinación, con las variables:
+\begin{table}
+    \centering
+    \begin{tabular}{c | c}
+        Velocidad [\unit{\meter}] & Tiempo$^{2}$ [\unit{\square\second}]\\ \hline
+         & \\ \hline       
+         & \\ \hline       
+    \end{tabular}
+\end{table}
+\end{frame}
+\begin{frame}
+\frametitle{Graficando los datos}
+Maneja las variables de la forma:
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw [-stealth] (0, 0) -- (5, 0) node [above, pos=1] {\small{$t^{2} \, [\unit{\square\second}]$}};
+        \draw [-stealth] (0, 0) -- (0, 3) node [left, pos=1] {\small{$v \, [\unit{\meter\per\second}]$}};
+    \end{tikzpicture}
+\end{figure}
+Gráficamente, ¿qué sabemos de la aceleración?
+\end{frame}
+\begin{frame}
+\frametitle{Calculando la aceleración}
+Sabemos que la velocidad inicial de la canica o balín es $v_{i} = 0$, anotando el último valor de velocidad en \SI{100}{\centi\meter}, calcula la aceleración en cada ángulo de inclinación.
+\end{frame}
+\begin{frame}
+\frametitle{Calculando la aceleración}
+¿Qué nos dice el valor de la aceleración en todo el tramo del riel con respecto al ángulo de inclinación?
+\end{frame}
+
+\section{El reporte}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Preparación del reporte}
+
+\begin{frame}
+\frametitle{Entrega en equipo}
+En esta ocasión, el reporte se deberá de preparar en equipo, siguiendo los puntos:
+\setbeamercolor{item projected}{bg=cobalt,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Anotar el nombre el integrante en la hoja y equipo al que pertenece.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Entrega en equipo}
+\setbeamercolor{item projected}{bg=cobalt,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Cada integrante debe de preparar en su cuaderno y/o libreta, escrito a mano, la tabla de valores de cada registro de distancia y tiempo, de cada inclinación
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Entrega en equipo}
+\setbeamercolor{item projected}{bg=cobalt,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Preparar una gráfica de desplazamiento y tiempo, identificando el ángulo que ocupa para graficar, deberá de  anotar el nombre de la alumna/alumno y responder la pregunta que se indica.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Entrega en equipo}
+\setbeamercolor{item projected}{bg=cobalt,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Cada integrante debe de preparar la gráfica de velocidad y tiempo, identificando el ángulo que ocupa para graficar, anotando su nombre y responder la pregunta que se indica en la diapositiva.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Aportación individual}
+Cada integrante deberá de aportar su tabla de datos (aunque sean los mismos), una gráfica de desplazamiento y tiempo, con la respuesta a la pregunta.
+\\
+\bigskip
+Así como la gráfica de velocidad y tiempo al cuadrado, con la respuesta a la pregunta.
+\end{frame}
+\begin{frame}
+\frametitle{Entrega en equipo}
+El equipo debe de organizarse para reunir las aportaciones de cada integrante y preparar un solo archivo.
+\\
+\bigskip
+Este archivo deberá de compartirse con cada integrante.
+\end{frame}
+\begin{frame}
+\frametitle{Envío del reporte}
+Se abrirá una asignación en Teams para que cada alumna/alumno envíe el archivo con el reporte.
+\\
+\bigskip
+En caso de que se haya participado en la actividad, se haya enviado la aportación, pero no haya enviado el archivo del equipo, tendrá cero en la práctica.
+\end{frame}
+\begin{frame}
+\frametitle{Envío del reporte}
+Como se pide la organización en equipo, si algún integrante del equipo no envía su aportación y no aparece en el archivo, se descontará evaluación a todo el equipo.
+\end{frame}
+\begin{frame}
+\frametitle{Envío del reporte}
+La responsabilidad de trabajo es de TODO el equipo, no solo de quien organiza o propone armar el archivo.
+\end{frame}
+\begin{frame}
+\frametitle{Plazo de envío}
+Se deberá de enviar por la asignación en Teams el archivo del reporte de la Práctica 5, a más tardar el miércoles 19 de julio a las 8 pm.
+\end{frame}
+\begin{frame}
+\frametitle{Reporte como parte de la evaluación}
+Este reporte será parte de la segunda evaluación parcial.
+\end{frame}
+
+\end{document}

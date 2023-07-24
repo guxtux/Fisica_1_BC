@@ -1,0 +1,71 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Ejercicios de Velocidad - Física 1\vspace{-5ex}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Ejercicios a cuenta - Solución}
+
+\begin{enumerate}
+\item ¿A qué velocidad promedio iba un auto que recorrió \SI{250}{\kilo\meter} en \SI{3}{\hour}?
+
+\textbf{Solución:}
+\begin{align*}
+v = \dfrac{d}{t} = \dfrac{\SI{250}{\kilo\meter}}{\SI{3}{\hour}} = \SI{83.33}{\kilo\meter\per\hour}
+\end{align*}
+\item Calcula el tiempo en minutos de un nadador que batió el récord mundial de los \SI{400}{\meter} libres a una velocidad de \SI{20}{\kilo\meter}.
+\item ¿A qué velocidad en \unit{\kilo\meter\per\hour} corrió Usain Bolt en el Campeonato Mundial de Berlín en el año 2009 para batir el récord mundial de los \SI{100}{\meter} planos en \SI{9.58}{\second}?
+
+\textbf{Solución:}
+\begin{align*}
+v &= \dfrac{d}{t} = \dfrac{\SI{100}{\meter}}{\SI{9.58}{\second}} = \SI{10.43}{\meter\per\second} \\[0.5em]
+v &= \left( \SI[per-mode=fraction]{10.43}{\meter\per\second} \right) \left( \dfrac{\SI{1}{\kilo\meter}}{\SI{1000}{\meter}} \right) \left( \dfrac{\SI{3600}{\second}}{\SI{1}{\hour}} \right) = \SI[per-mode=fraction]{37.54}{\kilo\meter\per\hour}
+\end{align*}
+
+\item ¿Qué distancia recorrió un avión que viajaba a \SI{750}{\kilo\meter\per\hour} después de \SI{2.5}{\hour} de vuelo?
+
+\textbf{Solución:}
+\begin{align*}
+d = v \, t = \left( \SI[per-mode=fraction]{750}{\kilo\meter\per\hour} \right) \left( \SI{2.5}{\hour} \right) = \SI{1875}{\kilo\meter}
+\end{align*}
+\item Si en una carretera de Estados Unidos la velocidad máxima es de $80$ mi/\unit{\hour}, ¿cuál es su velocidad en \unit{\kilo\meter\per\hour}?
+
+\textbf{Solución:}
+\begin{align*}
+80 \, \text{mi}/\unit{\hour} \left( \dfrac{\SI{1.609}{\kilo\meter}}{1 \, \text{mi}} \right) = \SI[per-mode=fraction]{128.72}{\kilo\meter\per\hour}
+\end{align*}
+\item Calcula la velocidad en \unit{\kilo\meter\per\hour}, a la que corrió el atleta keniata Wilson Kipsang Kiprotich para batir el récord mundial vigente, que realizó en el maratón de Berlín, en el año 2013, cuya distancia total es de \SI{42.195}{\kilo\meter}, en un tiempo de \SI{2}{\hour} \SI{3}{\minute} \SI{23}{\second}.
+
+\textbf{Solución:}
+\begin{align*}
+v = \dfrac{d}{t} = \dfrac{\SI{42.195}{\kilo\meter}}{\SI{7403}{\second}} = \dfrac{\SI{42.195}{\kilo\meter}}{\SI{2.056}{\hour}} = \SI{20.52}{\kilo\meter\per\hour}
+\end{align*}
+
+
+\end{enumerate}
+
+\end{document}

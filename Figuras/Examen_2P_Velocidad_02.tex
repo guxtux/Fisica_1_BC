@@ -1,0 +1,38 @@
+\documentclass[margin=5mm, tikz]{standalone}
+\usepackage[utf8x]{inputenc}
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{physics}
+\begin{document}
+\begin{tikzpicture}
+    
+    \draw [-stealth] (0, 0) -- (9.5, 0) node [above, pos=1] {\small{$t \, [\unit{\second}]$}};
+    \draw [-stealth] (0, 0) -- (0, 4.5) node [left, pos=1.05] {\small{$d \,[ \unit{\meter}]$}};
+
+    \node at (0, -0.4) {\small{$0$}};
+
+    \foreach  \x in {1, 2, ..., 9}
+        { \draw (\x, -0.2) -- (\x, 0.2);
+        \node at (\x, -0.4) {\small{$\x$}};
+        }
+    
+    \foreach[evaluate={\j=int(\y*10)}] \y in {1, 2, 3, 4}
+    {
+        \draw (-0.2, \y) -- (0.2, \y);
+        \node at (-0.5, \y) {\small{$\j$}};
+    }
+
+    \draw [thick] (0, 2) -- (2, 2) -- (5, 0) -- (7, 2) -- (8, 1);
+
+    \draw (0, 2) [fill] circle (2pt);
+    \node at (0.4, 2.3) {$A$};
+    \draw (2, 2) [fill] circle (2pt);
+    \node at (2, 2.3) {$B$};
+    \draw (5, 0) [fill] circle (2pt);
+    \node at (5, 0.5) {$C$};
+    \draw (7, 2) [fill] circle (2pt);
+    \node at (7, 2.3) {$D$};
+    \draw (8, 1) [fill] circle (2pt);
+    \node at (8.3, 1) {$E$};
+\end{tikzpicture}
+\end{document}
