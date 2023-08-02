@@ -1,0 +1,137 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Práctica 6 Cálculo del valor de $g$ - Física 1\vspace{-5ex}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+La elaboración y entrega del reporte en físico es INDIVIDUAL. Genera una portada en donde indicarás tu nombre completo.
+
+Responde cada una de las preguntas del apartado \enquote{Investiga y escribe brevemente} de la Práctica 6 - Cálculo del valor de $g$ del Manual de Prácticas.
+
+\textbf{Objetivo: } Determinar de manera experimental con un péndulo el valor de la aceleración debida a la gravedad. 
+
+Actividades a realizar.
+\begin{enumerate}
+\item Se han montado un soporte universal con una varilla, en la que está atado un hilo con una masa, así como una pinza con un hilo y otra masa, la pinza está sujeta del techo.
+\item Deberás de medir el período de oscilación del péndulo para un desplazamiento angular determinado, es decir, deberás de anotar el tiempo que tarda el péndulo en completar 5 oscilaciones completas.
+\item Repite 5 ocasiones el registro del período del péndulo, con el mismo desplazamiento angular.
+
+Longitud hilo $L_{1}$: 
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c |} \hline
+Medición & Período [\unit{\second}] \\ \hline
+$t_{1}$ &  \\ \hline
+$t_{2}$ &  \\ \hline
+$t_{3}$ &  \\ \hline
+$t_{4}$ &  \\ \hline
+$t_{5}$ &  \\ \hline    
+\end{tabular}
+\end{table}
+Calcula el promedio del período de oscilación del péndulo: $T_{\text{promedio1}}$: \rule{2cm}{0.3mm}
+\item Completa la misma tabla de mediciones del período de oscilación de los otros dos péndulos, toma en cuenta que las longitudes del hilo son distintas:
+
+\begin{minipage}{0.4\linewidth}
+Longitud hilo $L_{2}$: 
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c |} \hline
+Medición & Período [\unit{\second}] \\ \hline
+$t_{1}$ &  \\ \hline
+$t_{2}$ &  \\ \hline
+$t_{3}$ &  \\ \hline
+$t_{4}$ &  \\ \hline
+$t_{5}$ &  \\ \hline    
+\end{tabular}
+\end{table}
+$T_{\text{promedio2}}$: \rule{2cm}{0.3mm}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}{0.4\linewidth}
+Longitud hilo $L_{3}$: 
+\begin{table}[H]
+\centering
+\begin{tabular}{| c | c |} \hline
+Medición & Período [\unit{\second}] \\ \hline
+$t_{1}$ &  \\ \hline
+$t_{2}$ &  \\ \hline
+$t_{3}$ &  \\ \hline
+$t_{4}$ &  \\ \hline
+$t_{5}$ &  \\ \hline    
+\end{tabular}
+\end{table}
+$T_{\text{promedio3}}$: \rule{2cm}{0.3mm}
+\end{minipage}
+\item Una vez completadas las tres tablas, revisa que cada integrante del equipo tenga los datos.
+\item Corta el hilo de cada péndulo y mide su longitud primero con la regla de madera, luego con el flexómetro y anota los datos en la siguiente tabla:
+\begin{table}[H]\centering
+\begin{tabular}{| c | c | c |} \hline
+Hilo & Regla (\unit{\meter}) & Flexómetro (\unit{\meter}) \\ \hline
+$L_{1}$ & & \\ \hline
+$L_{2}$ & & \\ \hline
+$L_{3}$ & & \\ \hline
+\end{tabular}
+\end{table}
+\item La siguiente expresión corresponde al valor del período de oscilación de un péndulo $T$, y donde $L$ es la longitud del hilo:
+\begin{align*}
+T = 2 \, \pi \sqrt{\dfrac{L}{g}}
+\end{align*}
+Despeja el valor de $g$.
+\item Con el despeje que has hecho, calcula el valor de $g$ para cada péndulo, donde ya conoces el valor de la longitud tanto con la regla, como con el flexómetro, y período de oscilación, calcula el error relativo considerando el valor de \break \hfill $g = \SI{9.81}{\meter\per\square\second}$, como valor exacto.
+
+\textbf{Longitud del hilo medida con la regla de madera.}
+\begin{table}[H]
+    \centering
+\begin{tabular}{| c | p{3cm} | p{3cm} | p{3cm} | c |} \hline
+Péndulo & \makecell{Longitud} & \makecell{Período} & \makecell{$g$} & Error relativo \\ \hline
+$1$ & $L_{1} = $ & $T_{1} = $ & & \\ \hline
+$2$ & $L_{2} = $ & $T_{2} = $ & & \\ \hline
+$3$ & $L_{3} = $ & $T_{3} = $ & & \\ \hline
+\end{tabular}
+\end{table}
+
+\textbf{Longitud del hilo medida con el flexómetro.}
+\begin{table}[H]
+    \centering
+\begin{tabular}{| c | p{3cm} | p{3cm} | p{3cm} | c |} \hline
+Péndulo & \makecell{Longitud} & \makecell{Período} & \makecell{$g$} & Error relativo \\ \hline
+$1$ & $L_{1} = $ & $T_{1} = $ & & \\ \hline
+$2$ & $L_{2} = $ & $T_{2} = $ & & \\ \hline
+$3$ & $L_{3} = $ & $T_{3} = $ & & \\ \hline
+\end{tabular}
+\end{table}
+
+\item ¿Para qué péndulo se aproxima mejor el valor de $g$. ¿Por qué? Justifica tu respuesta.
+\item ¿Para qué péndulo se el valor de $g$ tiene el mayor error. ¿Por qué? Justifica tu respuesta.
+\item ¿Cómo podrías mejorar la aproximación del valor de $g$. Justifica tu respuesta.
+\end{enumerate}
+
+\textbf{Nota importante: } Esta hoja firmada por el Profesor deberás de incluirla en tu reporte, \textocolor{red}{la hoja NO ES EL REPORTE}, deberás de integrar el apartado inicial, el objetivo, así como una descripción detallada de cada punto que realizaste, además de responder las preguntas que en esta hoja de indican.
+
+\end{document}

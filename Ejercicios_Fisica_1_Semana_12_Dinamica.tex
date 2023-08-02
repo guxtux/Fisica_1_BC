@@ -1,0 +1,69 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Ejercicios de Dinámica (Parte 1) - Física 1\vspace{-5ex}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Ejercicios a cuenta}
+
+Estos ejercicios otorgarán hasta $10$ puntos a la Evaluación Continua.
+
+La entrega se hará vía Teams en asignación, teniendo como plazo el día domingo 6 de agosto a las 8 pm.
+
+Cada ejercicio vale $1$ punto, siempre y cuando esté correcto. Se otorgará una parte proporcional en caso de tener desarrollo detallado pero el resultado no sea el esperado.
+
+La solución al ejercicio deberá de desarrollarse de manera completa: datos, expresión, sustitución, manejo de unidades y resultado. En caso de presentar solo el resultado, es decir, sin desarrollo, aunque el resultado sea el correcto, la solución no aportará puntaje.
+
+Anota en la hoja tu nombre completo y todo el enunciado de cada ejercicio.
+
+\begin{enumerate}
+\item Determina la magnitud de la fuerza que se debe aplicar a una motoneta que tiene una masa de \SI{40}{\kilogram} para que cambie la magnitud de su velocidad de $0$ a \SI{3}{\meter\per\second} en un segundo.
+\item Calcula la masa de un bloque de madera en kilogramos si al recibir una fuerza cuya magnitud es de \SI{300}{\newton} le produce una aceleración con una magnitud de \SI{150}{\centi\meter\per\square\second}.
+\item Determina la magnitud de la aceleración en \unit{\meter\per\square\second} que le produce una fuerza cuya magnitud es de \SI{75}{\newton} a una piedra con una masa de \SI{1500}{\gram}.
+\item Calcula la magnitud de la fuerza que se le aplica a un sillón de \SI{10}{\kilo\gram} de masa si  adquiere una aceleración con una magnitud de \SI{2.5}{\meter\per\square\second}.
+\item Hallar la magnitud del peso de una roca cuya masa es de \SI{100}{\kilo\gram}.
+\item Determina la masa de una roca cuyo peso tiene una magnitud de \SI{1500}{\newton}.
+\item Calcula la magnitud de la fuerza neta que debe aplicarse a un bloque cuyo peso tiene una magnitud de \SI{25}{\newton} para que adquiera una aceleración cuya magnitud es de \SI{3}{\meter\per\square\second}.
+\item Un instante antes de que un prisma rectangular de madera que tiene un peso con una magnitud de \SI{20}{\newton} comience a deslizarse sobre una superficie horizontal de cemento, se produce una fuerza máxima de fricción estática cuya magnitud es de \SI{11}{\newton}. Calcula el coeficiente de fricción estática entre la madera y el cemento.
+\item Calcular la magnitud de la fuerza que se debe aplicar para deslizar al bloque de la siguiente figura a velocidad constante, si tiene un peso cuya magnitud es de \SI{150}{N} y el coeficiente de fricción cinética es
+de \num{0.3}.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \draw (0, 0) -- (4, 0);
+        \draw (1, 0) rectangle (3, 1);
+        \draw [dashed] (3, 1) -- (5, 1);
+        \draw [-stealth, thick] (3, 1) -- (4.87, 1.68);
+        \draw (4, 1) arc(0:20:1);
+        \node at (4.8, 1.2) {\small{$\theta = \ang{20}$}};
+        \node at (5, 2.3) {\small{$F = \, ?$}};
+    \end{tikzpicture}
+\end{figure}
+\item Una motocicleta cuyo peso tiene una magnitud de \SI{1800}{\newton} se mueve a una velocidad cuya magnitud es de \SI{60}{\kilo\meter\per\hour}. Al aplicar los frenos se detiene a una distancia de \SI{25}{\meter}. Calcula la magnitud de la fuerza de fricción promedio que la detiene.
+\end{enumerate}
+
+\end{document}

@@ -480,6 +480,811 @@ Así que la unidad de fuerza en el sistema inglés es:
 \begin{align*}
 1 \, \text{libra-fuerza} = \text{slug} \, \dfrac{\text{pie}}{\unit{\square\second}}
 \end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado de otro ejercicio}
+Determina la fuerza que se necesita aplicar a un auto de \SI{800}{\kilo\gram} para que éste se acelere \SI{4}{\meter\per\square\second}.
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:}
+\pause
+\begin{align*}
+m &= \SI{800}{\kilo\gram} \\[0.5em]
+a &= \SI{4}{\meter\per\square\second} \\[0.5em]
+F &= \, ?
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Expresión:}
+\pause
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{Imagenes/Newton_11.jpg}
+\end{figure}
+\pause
+\begin{align*}
+F = m \, a
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+F &= \left( \SI{800}{\kilo\gram} \right) \left( \SI{4}{\meter\per\square\second} \right) = \\[0.5em] \pause
+F &= \SI[per-mode=fraction]{3.2d3}{\kilo\gram\meter\per\square\second} = \pause \SI{3.2d3}{\newton}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}    
+\begin{frame}
+\frametitle{Enunciado de otro ejercicio}
+El resultado de las fuerzas que actúan sobre un cuerpo cuya masa vale \SI{40}{\kilo\gram}, es de \SI{85}{\newton}
+\\
+\bigskip
+¿Cuál es el valor de la aceleración que posee este cuerpo?
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:}
+\pause
+\begin{align*}
+m &= \SI{40}{\kilo\gram} \\[0.5em]
+F &= \SI{85}{\newton} \\[0.5em]
+a &= \, ?
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Expresión:}
+\pause
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{Imagenes/Newton_11.jpg}
+\end{figure}
+\pause
+\begin{align*}
+a = \dfrac{F}{m}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+a &= \dfrac{\SI{85}{\newton}}{\SI{40}{\kilo\gram}} = \\[0.5em] \pause
+a &= 2.125 \, \dfrac{\dfrac{\unit{\kilo\gram\meter}}{\unit{\square\second}}}{\unit{\kilo\gram}} = \pause 2.125 \, \dfrac{\unit{\kilo\gram\meter}}{\unit{\kilo\gram\square\second}} \\[0.5em] \pause
+a &= \SI[per-mode=fraction]{2.125}{\meter\per\square\second}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio más elaborado}
+¿Qué fuerza debe ejercer el motor de un automóvil cuya masa es de \SI{1500}{\kilo\gram} para aumentar su velocidad de \SI{4.5}{\kilo\gram\per\hour} a \SI{40}{\kilo\gram\per\hour} en \SI{8}{\second}?
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio más elaborado}
+\textocolor{red}{Datos:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+m &= \SI{1500}{\kilo\gram} \\[0.5em] \pause
+F &= \, ? \\[0.5em] \pause
+a &= \, ? \\[0.5em] \pause
+v_{i} &= \SI{4.5}{\kilo\meter\per\hour} \\[0.5em] \pause
+v_{f} &= \SI{40}{\kilo\meter\per\hour}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio más elaborado}
+\textocolor{red}{Expresión:}
+\\
+\begin{minipage}{0.4\linewidth}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{Imagenes/Newton_11.jpg}
+\end{figure}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+\begin{align*}
+F = m \, a
+\end{align*}
+\end{minipage}
+\pause
+\begin{align*}
+a = \dfrac{v_{f} - v_{i}}{t}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Ajustando las unidades}
+El valor de la velocidad se indica en \unit{\kilo\meter\per\hour}, el tiempo en el que hay un cambio de velocidad, es decir, la aceleración, se da en segundos, por lo que hay que ajustar las unidades y manejar las mismas.
+\end{frame}
+\begin{frame}
+\frametitle{Conversión de unidades}
+\begin{eqnarray*}
+\begin{aligned}
+v_{i} &= \SI[per-mode=fraction]{4.5}{\kilo\meter\per\hour} \left( \dfrac{\SI{1d3}{\meter}}{\SI{1}{\kilo\meter}} \right) \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \pause \SI[per-mode=fraction]{1.25}{\meter\per\second} \\[0.5em] \pause
+v_{f} &= \SI[per-mode=fraction]{40}{\kilo\meter\per\hour} \left( \dfrac{\SI{1d3}{\meter}}{\SI{1}{\kilo\meter}} \right) \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \pause \SI[per-mode=fraction]{11.11}{\meter\per\second} \\[0.5em] \pause
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+a &= \dfrac{\SI[per-mode=fraction]{11.11}{\meter\per\second} - \SI[per-mode=fraction]{1.25}{\meter\per\second}}{\SI{8}{\second}} = \\[0.5em] \pause
+a &= \SI[per-mode=fraction]{1.23}{\meter\per\square\second} \\[0.5em] \pause
+F &= \left( \SI{1500}{\kilo\gram} \right) \left( \SI[per-mode=fraction]{1.23}{\meter\per\square\second} \right) \\[0.5em] \pause
+F &= \SI[per-mode=fraction]{1845}{\kilo\gram\meter\per\square\second} = \pause \SI{1845}{\newton}
+\end{aligned}
+\end{eqnarray*}  
+\end{frame}
 
+\subsection{Tercera ley}
+
+\begin{frame}
+\frametitle{La tercera ley de Newton}
+La tercera Ley de Newton indica que cuando \textocolor{denim}{un cuerpo ejerce una fuerza sobre otro}, \pause \textocolor{red}{el segundo ejerce siempre sobre el primero una fuerza de igual magnitud pero de sentido opuesto}.
+\end{frame}
+\begin{frame}
+\frametitle{La tercera ley de Newton}
+A la tercera ley de Newton, se le conoce como \pause \textocolor{auburn}{ley de acción y reacción}.
+\\
+\bigskip
+\pause
+A cada fuerza de acción, le corresponde una fuerza de reacción.
+\end{frame}
+\begin{frame}
+\frametitle{Ejemplo de la tercera ley de Newton}
+\begin{figure}
+    \centering
+    \only<1>{\includegraphics[scale=3]{Imagenes/Pateando_Balon_01.png}}
+    \only<2>{\includegraphics[scale=3]{Imagenes/Pateando_Balon_02.png}}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Resumen}
+Las tres leyes de Newton son:
+\pause
+\setbeamercolor{item projected}{bg=bananayellow,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Ley de la inercia.
+\item Ley de la relación entre la fuerza y la aceleración.
+\item Ley de la acción y reacción.
+\end{enumerate}
+\end{frame}
+
+\subsection{Fuerza normal}
+
+\begin{frame}
+\frametitle{La fuerza normal}
+Si se considera un objeto en reposo $(v = 0)$ sobre una superficie horizontal, \pause sabemos que el centro de la Tierra ejerce sobre él la fuerza gravitacional, \pause a pesar de no tener aceleración $(a = 0)$.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw (0, 0) -- (3, 0);
+        \draw (1, 0) rectangle (2, 0.5) node [pos=0.5] {\small{$m$}};
+        \draw [-stealth, thick] (1.5, 0) -- (1.5, -1);
+        \node at (1.3, -1.4) {\small{$W = m \, g$}};
+    \end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{La fuerza normal}
+De acuerdo con la segunda ley de Newton, \pause \textocolor{red}{la fuerza neta} que actúa sobre el objeto \textocolor{red}{es cero}, \pause por lo tanto, debe existir una fuerza que se oponga a la fuerza gravitacional y que actúe sobre el objeto para impedir que éste se hunda.
+\end{frame}
+\begin{frame}
+\frametitle{La fuerza normal}
+Esta fuerza es producida por la superficie, actúa de manera perpendicular a la superficie de contacto, se llama \textocolor{cobalt}{fuerza normal} $F_{n}$.
+\pause
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw (0, 0) -- (3, 0);
+        \draw (1, 0) rectangle (2, 0.5) node [pos=0.5] {\small{$m$}};
+        \draw [-stealth, thick] (1.5, 0) -- (1.5, -1);
+        \node at (1.3, -1.4) {\small{$W = m \, g$}};
+
+        \draw (5, 0) -- (6, 0);
+        \draw [-stealth, thick] (5.5, 0) -- (5.5, -1);
+        \node at (5.5, -1.4) {\small{$W = m \, g$}};
+        \draw [-stealth, thick] (5.5, 0) -- (5.5, 1);
+        \node at (5.5, 1.4) {\small{$F_{n}$}};
+    \end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Magnitud de la fuerza normal}
+Por la segunda ley de Newton:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\nsum F_{y} &= 0 \\[0.5em] \pause
+F_{n} -  m \, g &= 0 \\[0.5em] \pause
+F_{n} &=  m \, g 
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+
+\subsection{Plano inclinado}
+
+\begin{frame}
+\frametitle{El plano inclinado}
+Si un objeto descansa sobre un plano inclinado, actúan sobre él la fuerza gravitacional (el peso) y la fuerza normal $F_{n}$:
+\pause
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{Imagenes/Plano_inclinado_01.jpg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Representación gráfica}
+Tendremos que el plano inclinado se visualiza:
+\pause
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=2]
+    \begin{scope}[rotate=15]
+        \draw (0, 0) -- (3, 0);
+        \draw (1, 0) rectangle (2, 0.5);
+        \draw [fill] (1.5, 0.25) circle (0.5pt);
+        \draw [-stealth, thick] (1.5, 0.25) -- (1.5, 1) node [near end, pos=1.2] {\small{$N$}};
+        \draw [dashed] (1.5, 0.25) -- (1.5, -1);
+        \draw [-stealth, thick] (1.5, 0.25) -- (1.25, -0.72) node [near end, pos=1.2] {\small{$W$}};
+    \end{scope}
+
+    \draw (0, 0) -- (1, 0);
+    \draw (0.5, 0) arc(0:15:0.5);
+    \node at (0.8, 0.1) {\small{$\theta$}};
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Descomponiendo el peso}
+Si establecemos un sistema de coordenadas donde el eje $x$ es paralelo al plano inclinado, \pause mientras que el eje $y$ perpendicular al mismo, \pause se puede descomponer el vector peso $\vb{W}$ en sus componentes rectangulares $W_{x}$ y $W_{y}$:
+\end{frame}
+\begin{frame}
+\frametitle{Diagrama de cuerpo libre}
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=2]
+    \begin{scope}[rotate=15]
+        \draw (0, 0) -- (3, 0);
+        \draw [-stealth, thick] (1.5, 0) -- (1.5, 0.75) node [near end, pos=1.2] {\small{$N$}};
+        \draw [dashed] (1.5, 0.25) -- (1.5, -1);
+        \draw [-stealth, thick] (1.5, 0) -- (1.3, -0.75) node [near end, pos=1.2] {\small{$W$}};
+        \draw [-stealth] (1.5, 0) -- (1.3, 0) node [above, pos=1.1] {\footnotesize{$W_{x}$}};
+        \draw [-stealth] (1.5, 0) -- (1.5, -0.75) node [right, pos=1.1] {\footnotesize{$W_{y}$}};
+        \draw [dashed] (1.3, 0) -- (1.3, -0.75);
+        \draw [dashed] (1.5, -0.75) -- (1.3, -0.75);
+
+        \draw (1.5, -0.5) arc(270:255:0.5);
+        \node at (1.6, -0.5) {\footnotesize{$\theta$}};
+    \end{scope}
+
+    \draw (0, 0) -- (1, 0);
+    \draw (0.5, 0) arc(0:15:0.5);
+    \node at (0.8, 0.1) {\small{$\theta$}};
+    \pause
+    \node at (3.5, 1) {\small{Por geometría:}};
+    \node at (3.5, 0.6) {\small{$\cos \theta = \dfrac{W_{y}}{W}$}};
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Revisando las expresiones}
+Por geometría, tenemos que:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\cos \theta = \dfrac{W_{y}}{W} \pause \hspace{1cm} \Rightarrow \hspace{1cm} W_{y} = W \, \cos \theta
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Revisando las expresiones}    
+Como sabemos:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+W = m \, g  \pause \hspace{1cm} \Rightarrow \hspace{1cm} W_{y} = m \, g \, cos \theta
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Revisando las expresiones}
+De la misma manera:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+\sin \theta = \dfrac{W_{x}}{W} \pause \hspace{1cm} \Rightarrow \hspace{1cm} W_{x} = W \, sin \theta
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Fuerza normal}
+Para la fuerza normal: 
+\pause
+\begin{align*}
+\nsum F_{y} = m \, a_{y}
+\end{align*}
+\pause
+Como no hay movimiento:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+a_{y} = 0 \pause \hspace{0.5cm} \Rightarrow \hspace{0.5cm} N - W_{y} = 0 \pause \hspace{0.5cm} \Rightarrow \hspace{0.5cm} N = W_{y}
+\end{aligned}
+\end{eqnarray*}
+\pause
+Con lo que resulta $N = m \, g \, cos \theta$
+\end{frame}
+
+\section{La fricción}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Definiendo la fricción}
+
+\begin{frame}
+\frametitle{Entendiendo la fricción}
+Si se golpea una bola de billar sobre la mesa, su velocidad disminuye hasta que se detiene.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.15]{Imagenes/Friccion_01.jpg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Entendiendo la fricción}
+Esta desaceleración, de acuerdo con la \textocolor{burgundy}{primera ley de Newton}, \pause indica la \textocolor{byzantium}{existencia de una fuerza} que se opone al movimiento.
+\\
+\bigskip
+\pause
+Esta fuerza recibe el nombre de \textocolor{red}{fricción o rozamiento}.
+\end{frame}
+
+\subsection{Tipos de fricción}
+
+\begin{frame}
+\frametitle{Tipos de fricción}
+Existen dos tipos de fricciones:
+\pause
+\setbeamercolor{item projected}{bg=aquamarine,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item \textocolor{armygreen}{Fricción estática}: se presenta cuanto la fricción impide que un objeto se ponga en movimiento por la acción de una fuerza.
+\item \textocolor{arsenic}{Fricción cinética}: se presenta cuando la fricción se opone a un movimiento en acción.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Leyes de la fricción}
+\setbeamercolor{item projected}{bg=babypink,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Para superficies paralelas, la fuerza de fricción estática ($f_{s}$) actúa en la dirección de la fuerza aplicada, en sentido contrario.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Leyes de la fricción}
+\setbeamercolor{item projected}{bg=babypink,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item La magnitud de la fuerza de fricción estática es directamente proporcional a la magnitud de la fuerza normal, y se calcula multiplicando el coeficiente de fricción estático ($\mu_{s}$) por la normal:
+\begin{align*}
+f_{s} = \mu_{s} \, N
+\end{align*}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Leyes de la fricción}
+\setbeamercolor{item projected}{bg=babypink,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item La magnitud de la fuerza de fricción estática es cero cuando no se aplica una fuerza externa que ponga el objeto en movimiento.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Leyes de la fricción}
+\setbeamercolor{item projected}{bg=babypink,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item La magnitud de la fuerza de fricción estática alcanza su punto máximo cuando un objeto está a punto de iniciar su movimiento mediante la acción de una fuerza paralela a las superficies que están en contacto.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Leyes de la fricción}
+\setbeamercolor{item projected}{bg=babypink,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item La fuerza de fricción cinética es directamente proporcional a la magnitud de la fuerza normal, y se calcula multiplicando el coeficiente de fricción cinético ($\mu_{k}$) por la normal
+\begin{align*}
+f_{k} = \mu_{k} \, N
+\end{align*}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Leyes de la fricción}
+\setbeamercolor{item projected}{bg=babypink,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Se pueden presentar 3 casos cuando un objeto se desliza sobre una superficie y se le aplica una fuerza $F$ paralela a la superficie:
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Leyes de la fricción}
+1. Si $F = f_{k}$ el objeto se desliza a velocidad constante. \\[0.25em] \pause
+2. Si $F > f_{k}$ el objeto se acelera. \\[0.25em] \pause
+3. Si $F < f_{k}$ el objeto se desacelera hasta detenerse por completo.
+\end{frame}
+\begin{frame}
+\frametitle{Leyes de la fricción}
+\setbeamercolor{item projected}{bg=babypink,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Si se deja aplicar la fuerza, la fuerza de fricción cinética desacelera el objeto hasta llevarlo al reposo.
+\item El coeficiente de fricción estática es mayor que el coeficiente de fricción cinética, es decir, $f_{s} > f_{k}$
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+Una señora desea mover un mueble hacia la izquierda. \pause El mueble pesa \SI{35}{\kilo\gram} y el coeficiente de fricción cinética $\mu_{k}$ entre ella y el suelo es $0.36$.
+\\
+\bigskip
+\pause
+Calcula la fuerza que debe emplear la señora para comenzar a mover el mueble.
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:}
+\pause
+\begin{align*}
+m &= \SI{35}{\kilo\gram} \\[0.2em]
+\mu_{k} &= \num{0.36} \\[0.2em]
+g &= \SI{9.81}{\meter\per\square\second} \\[0.2em]
+F &= \, ?
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Expresiones:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+N &= m \, g \\[0.3em]
+f_{k} &= \mu_{k} \, N
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:}
+\begin{eqnarray*}
+\begin{aligned}
+N &= (\SI{35}{\kilo\gram})(\SI{9.81}{\meter\per\square\second}) = \pause \SI{343.35}{\newton} \\[0.5em] \pause
+f_{k} &= (0.36)(\SI{343.35}{\newton}) = \pause \SI{123.61}{\newton}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado de otro ejercicio}
+Una caja de \SI{70}{\kilo\gram} que se desliza sobre una superficie horizontal es jalada por un hombre con una fuerza de \SI{140}{\newton} con un ángulo de \ang{40} con la horizontal.
+\\
+\bigskip
+\pause
+Calcula la aceleración del objeto si el coeficiente de fricción cinética es de \num{0.15}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:}
+\pause
+\begin{minipage}[t]{0.4\linewidth}
+\begin{align*}
+m &= \SI{70}{\kilo\gram} \\[0.2em]
+\mu_{k} &= \num{0.15} \\[0.2em]
+g &= \SI{9.81}{\meter\per\square\second} \\[0.2em]
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\begin{align*}
+F &= \SI{140}{\newton} \\[0.2em]
+\theta &= \ang{40}\\[0.2em]
+a &= \, ?
+\end{align*}
+\end{minipage}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Expresiones:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+F_{y} &= F \sin \theta \\[0.3em]
+F_{x} &= F \cos \theta \\[0.3em]
+N &= m \, g \\[0.3em]
+f_{k} &= \mu_{k} \, N
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+Para el eje $y$:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+N + F_{y} - W &= 0 \\[0.3em] \pause
+N &= W - F_{y} \\[0.3em] \pause
+N &= m \, g - F \, \sin \theta
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+N &= (\SI{70}{\kilo\gram})(\SI{9.81}{\meter\per\square\second}) - (\SI{140}{\newton})(\sin \ang{40}) = \\[0.5em] \pause
+N &= \SI{596.70}{\newton}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+Para el eje $x$:
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+F_{x} - f_{k} &= m \, a \\[0.3em] \pause
+a &= \dfrac{F_{x} - f_{k}}{m} = \pause \dfrac{F \, \cos \ang{40} - \mu_{k} \, N}{m} = \\[0.3em] \pause
+a &= \dfrac{(\SI{140}{\newton})(0.766) - (0.15)(\SI{596.70}{\newton})}{\SI{70}{\kilo\gram}} = \\[0.5em]\pause
+a &= \SI{0.25}{\meter\per\square\second}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+
+\section{Ley de gravitación universal}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Definición}
+
+\begin{frame}
+\frametitle{La ley de gravitación universal}
+La ley de la gravitación universal nos menciona de que toda partícula en el universo \textocolor{ao}{atrae a otra partícula con una fuerza} que:
+\pause
+\begin{quote}
+“es directamente proporcional al producto de sus masas e inversamente proporcional al cuadrado de la distancia entre ellas”.
+\end{quote}
+\end{frame}
+\begin{frame}
+\frametitle{La expresión}
+La ley de gravitación universal se expresa como:
+\pause
+\begin{align*}
+F = G \, \dfrac{m_{1} \, m_{2}}{r^{2}}
+\end{align*}
+Donde:
+\pause
+\setbeamercolor{item projected}{bg=celadon,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item $F$ es la fuerza de atracción gravitacional.
+\item $G$ es la constante de gravitación universal.
+\begin{align*}
+G = \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram}
+\end{align*}
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{La expresión}
+\setbeamercolor{item projected}{bg=celadon,fg=black}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]    
+\conti
+\item $m_{1}$ y $m_{2}$ son las masas de los objetos.
+\item $r$ es la distancia entre los dos objetos.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Newton publica su ley}
+Newton publicó en su Ley de Gravitación Universal que la acción gravitatoria está en función de la masa de los objetos y la distancia entre ellos.
+\end{frame}
+\begin{frame}
+\frametitle{Relación entre la fuerza y la distancia}
+A mayor masa de un objeto mayor la fuerza de atracción con los objetos; \pause la fuerza gravitatoria será mayor a medida que disminuya la distancia entre ellos.
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado del ejercicio}
+Calcula la fuerza gravitacional entre dos personas de \SI{63}{\kilo\gram} y \SI{82}{\kilo\gram} respectivamente, si se encuentran separadas \SI{2}{\meter}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{Imagenes/Gravitacion_Universal_01.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Datos:}
+\begin{align*}
+m_{1} &= \SI{63}{\kilo\gram} \\[0.3em]
+m_{2} &= \SI{82}{\kilo\gram} \\[0.3em]
+r &= \SI{2}{\meter} \\[0.3em]
+G &= \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Expresión:}
+\pause
+\begin{align*}
+F = G \, \dfrac{m_{1} \, m_{2}}{r^{2}}
+\end{align*}
+\end{frame}
+\begin{frame}
+\frametitle{Resolviendo el ejercicio}
+\textocolor{red}{Sustitución:}
+\pause
+\begin{eqnarray*}
+\begin{aligned}
+F &= \dfrac{\left( \SI[per-mode=fraction]{6.67d-11}{\newton\square\meter\per\square\kilo\gram}\right)  (\SI{63}{\kilo\gram})(\SI{82}{\kilo\gram}) }{(\SI{2}{\meter})^{2}} = \\[0.5em] \pause
+F &= \SI{8.61d-8}{\newton}
+\end{aligned}
+\end{eqnarray*}
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado de otro ejercicio}
+Un cuerpo ($m_{1}$) de \SI{20}{\kilogram} se encuentra a \SI{5}{\meter} de otro cuerpo ($m_{2}$), entre ambos existe una fuerza de atracción de \SI{60d-11}{\newton}.
+\\
+\bigskip
+\pause
+Calcula la masa del otro cuerpo.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{Imagenes/Gravitacion_Universal_02.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio para entregar 1}
+La solución se debe de entregar a mano para la siguiente clase, contando $1$ punto de Evaluación Continua.
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado de otro ejercicio}
+Calcula la distancia de separación entre un cuerpo de \SI{3}{\kilo\gram} y otro de \SI{8}{\kilo\gram}, si entre ambos existe una fuerza de atracción de \SI{9d-9}{\newton}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{Imagenes/Gravitacion_Universal_03.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Ejercicio para entregar 2}
+La solución se debe de entregar a mano para la siguiente clase, contando $1$ punto de Evaluación Continua.
+\end{frame}    
+
+\section{Leyes de Kepler}
+\frame[allowframebreaks]{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{El trabajo de Kepler}
+    
+\begin{frame}
+\frametitle{El trabajo de Kepler}
+El astrónomo alemán Johannes Kepler es conocido por sus tres leyes que describen el movimiento de los planetas en sus órbitas alrededor del Sol.
+\end{frame}
+\begin{frame}
+\frametitle{El trabajo de Kepler}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{Imagenes/Kepler_01.jpg}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{Apoyándose con trabajos previos}
+Kepler descubrió que las \textocolor{cobalt}{trayectorias que los planetas describen alrededor del Sol eran elípticas}, \pause basándose en lo descrito por Apolonio de Pérgamo, quien desarrolló estudios sobre la elipse.
+\end{frame}
+
+\subsection{Primera ley}
+
+\begin{frame}
+\frametitle{Enunciado de la primera ley}
+Todos los planetas se desplazan alrededor del Sol siguiendo \textocolor{byzantine}{órbitas elípticas}, situando al Sol en uno de sus focos.
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado de la primera ley}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.4]{Imagenes/Kepler_Leyes_01.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{De la primera ley}
+En particular, hay dos puntos de interés en la órbita elíptica de la Tierra alrededor del Sol.
+\end{frame}
+\begin{frame}
+\frametitle{De la primera ley}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{Imagenes/Kepler_Leyes_01_b.png}
+\end{figure}
+\end{frame}
+
+\subsection{Segunda ley}
+
+\begin{frame}
+\frametitle{Enunciado de la segunda ley}
+La línea imaginaria que une cualquiera de los planetas con el Sol \textocolor{bulgarianrose}{barre áreas iguales en tiempos iguales}, \pause es decir, cuando el planeta está en el \textocolor{cadmiumgreen}{afelio}, su velocidad es menor que cuando está en el \textocolor{cadmiumred}{perihelio}.
+\end{frame}
+\begin{frame}
+\frametitle{Segunda ley de Kepler}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.45]{Imagenes/Kepler_Leyes_02.png}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{De la segunda ley}
+Kepler demostró que los planetas tienen una mayor velocidad cuando se encuentran más cercanos al Sol que cuando están más lejanos.
+\end{frame}
+
+\subsection{Tercera ley}
+
+
+\begin{frame}
+\frametitle{Enunciado de la tercera ley}
+El \textocolor{red}{cuadrado del período} ($T$) de cualquier planeta tiene una variación directamente proporcional con el \textocolor{cardinal}{cubo del radio de su órbita} ($r$), \pause  es decir, con el cubo de la distancia promedio que existe desde un planeta hasta el Sol.
+\end{frame}
+\begin{frame}
+\frametitle{Enunciado de la tercera ley}    
+Matemáticamente, se expresa con la fórmula:
+\pause
+\begin{align*}
+T^{2} = k \, r^{3}
+\end{align*}
+donde $k$ es una constante de proporcionalidad, que tiene el mismo valor para todos los planetas.
 \end{frame}
 \end{document}
