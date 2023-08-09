@@ -189,12 +189,12 @@ def elaboraCartaPractica(Nombre, Preparacion, Trabajo_E, Participacion, Reporte,
 
 def elaboraCartaConcentrado(Estudiante, L_Tiempo, Ejer_4, SIU, Not_Cient, M_Amb, Puntos, Eval_Continua, Practica_1, Practica_2, Laboratorio):
 
-    ruta = 'Evaluacion_Continua/Parcial_01'
-    nombre_archivo = Estudiante.strip() + '_Concentrado_Parcial_01.pdf'
+    ruta = 'Evaluacion_Continua/Pronostico'
+    nombre_archivo = Estudiante.strip() + '_Pronostico_Evaluacion.pdf'
     outfilepath = os.path.join( ruta, nombre_archivo )
     objetoCanvas = Canvas(outfilepath, pagesize=letter)
     
-    objetoCanvas.drawString(275, 700, 'Ciudad de México a 20 de junio de 2023.')
+    objetoCanvas.drawString(275, 700, 'Ciudad de México a 2 de agosto de 2023.')
     
     #Estilo de la hoja.
     
@@ -212,7 +212,11 @@ def elaboraCartaConcentrado(Estudiante, L_Tiempo, Ejer_4, SIU, Not_Cient, M_Amb,
     
     story2 = []
     
-    ptextomensaje = 'A continuación se te presenta la relación de actividades de Evaluación Continua, así como de los reportes de las Prácticas de Laboratorio, que forman parte de la evaluación del Primer Examen Parcial del curso de Física 1.<br/><br/><b>Evaluación Continua.</b><br/> Las actividades de evaluación continua, el puntaje a obtener en la actividad, así como las fechas de asignación y entrega por Teams son las siguientes:'
+    ptextomensaje = 'A continuación se te presenta la relación de evaluaciones del primer y segundo examen parcial, con ' +\
+        'la finalidad de hacer un pronóstico de tu calificación final del curso de Física 1, es por ello que se indica ' +\
+        'una calificación simulada para el tercer parcial, para que de esa manera se obtenga un promedio.<br/>' +\
+        'La calificación final que aparece, es la que obtendrías si en el tercer examen parcial tu nota es de 10, ' +\
+        'en caso de que esa calificación disminuya, tu promedio final también cambiaría.'
     
     styles.add(ParagraphStyle(name='Justificado', alignment=TA_JUSTIFY, fontSize = 12, leading = 18))
     story2.append(Paragraph(ptextomensaje, styles['Justificado']))
@@ -361,3 +365,6 @@ def elaboraCartaConcentrado(Estudiante, L_Tiempo, Ejer_4, SIU, Not_Cient, M_Amb,
     
     #Salvamos el PDF.
     objetoCanvas.save()
+    
+def elaboraCartaPronostico(Estudiante, Primer, Segundo, Tercer, Pronostico):
+    
