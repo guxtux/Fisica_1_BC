@@ -1,0 +1,137 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Ejercicios de Dinámica (Parte 1) Solución\vspace{-5ex}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Ejercicios a cuenta}
+
+\begin{enumerate}
+\item Determina la magnitud de la fuerza que se debe aplicar a una motoneta que tiene una masa de \SI{40}{\kilogram} para que cambie la magnitud de su velocidad de $0$ a \SI{3}{\meter\per\second} en un segundo.
+\begin{align*}
+a &= \dfrac{v_{f} - v_{i}}{t} = \dfrac{\SI{3}{\meter\per\second} - 0}{\SI{1}{\second}} = \SI{3}{\meter\per\square\second} \\[0.5em]
+F &= m \, a = (\SI{40}{\kilo\gram})(\SI{3}{\meter\per\square\second}) = \SI{120}{\newton}
+\end{align*}
+\item Calcula la masa de un bloque de madera en kilogramos si al recibir una fuerza cuya magnitud es de \SI{300}{\newton} le produce una aceleración con una magnitud de \SI{150}{\centi\meter\per\square\second}.
+\begin{align*}
+m = \dfrac{F}{a} = \dfrac{\SI{300}{\newton}}{\SI{1.5}{\meter\per\square\second}} = \SI{200}{\kilo\gram}
+\end{align*}
+\item Determina la magnitud de la aceleración en \unit{\meter\per\square\second} que le produce una fuerza cuya magnitud es de \SI{75}{\newton} a una piedra con una masa de \SI{1500}{\gram}.
+\begin{align*}
+a = \dfrac{F}{m} = \dfrac{\SI{75}{\newton}}{\SI{1.5}{\kilo\gram}} = \SI{50}{\meter\per\square\second}
+\end{align*}
+\item Calcula la magnitud de la fuerza que se le aplica a un sillón de \SI{10}{\kilo\gram} de masa si  adquiere una aceleración con una magnitud de \SI{2.5}{\meter\per\square\second}.
+\begin{align*}
+F = m \, a = (\SI{10}{\kilo\gram})(\SI{2.5}{\meter\per\square\second}) = \SI{25}{\newton}
+\end{align*}
+\item Hallar la magnitud del peso de una roca cuya masa es de \SI{100}{\kilo\gram}.
+\begin{align*}
+W = m \, g = (\SI{100}{\kilo\gram})(\SI{9.81}{\meter\per\square\second}) = \SI{981}{\newton}
+\end{align*}
+\item Determina la masa de una roca cuyo peso tiene una magnitud de \SI{1500}{\newton}.
+\begin{align*}
+m = \dfrac{W}{g} = \dfrac{\SI{1500}{\newton}}{\SI{9.81}{\meter\per\square\second}} = \SI{152.90}{\kilo\gram}
+\end{align*}
+\item Calcula la magnitud de la fuerza neta que debe aplicarse a un bloque cuyo peso tiene una magnitud de \SI{25}{\newton} para que adquiera una aceleración cuya magnitud es de \SI{3}{\meter\per\square\second}.
+\begin{align*}
+F = m \, a = \left( \dfrac{\SI{25}{\newton}}{\SI{9.81}{\meter\per\square\second}} \right) (\SI{3}{\meter\per\square\second}) = (\SI{2.54}{\kilo\gram})(\SI{3}{\meter\per\square\second}) = \SI{7.62}{\newton}
+\end{align*}
+\item Un instante antes de que un prisma rectangular de madera que tiene un peso con una magnitud de \SI{20}{\newton} comience a deslizarse sobre una superficie horizontal de cemento, se produce una fuerza máxima de fricción estática cuya magnitud es de \SI{11}{\newton}. Calcula el coeficiente de fricción estática entre la madera y el cemento.
+\begin{align*}
+f_{s} &= \mu_{s} \, N \hspace{0.3cm} \Rightarrow \hspace{0.3cm} \mu_{s} = \dfrac{f_{s}}{N} \\[0.5em]
+\mu_{s} &= \dfrac{\SI{11}{\newton}}{\SI{20}{\newton}} = \num{0.55}
+\end{align*}
+\item Calcular la magnitud de la fuerza que se debe aplicar para deslizar al bloque de la siguiente figura a velocidad constante, si tiene un peso cuya magnitud es de \SI{150}{N} y el coeficiente de fricción cinética es
+de \num{0.3}.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \draw (0, 0) -- (4, 0);
+        \draw (1, 0) rectangle (3, 1);
+        \draw [dashed] (3, 1) -- (5, 1);
+        \draw [-stealth, thick] (3, 1) -- (4.87, 1.68);
+        \draw (4, 1) arc(0:20:1);
+        \node at (4.8, 1.2) {\small{$\theta = \ang{20}$}};
+        \node at (5, 2.3) {\small{$F = \, ?$}};
+    \end{tikzpicture}
+\end{figure}
+Hacemos el diagrama de cuerpo libre:
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.5]
+        \draw (-2, 0) -- (2.5, 0);
+        \draw (0, -2.5) -- (0, 2.5);
+        \draw [-stealth, thick] (0, 0) -- (1.87, 0.68);
+        \draw (0.5, 0) arc(0:20:0.5);
+        \node at (1.2, 0.2) {\small{$\theta$}};
+        % \node at (5, 2.3) {\small{$F = \, ?$}};
+        \draw [-stealth, thick] (0, 0) -- (1.87, 0) node [below, midway] {\small{$F_{x}$}};
+        \draw [-stealth, thick] (1.87, 0) -- (1.87, 0.68) node [right, midway] {\small{$F_{y}$}};
+        \draw [-stealth, thick] (0, 0) -- (-1.5, 0) node [above, pos=1] {\small{$f_{k}$}};
+        \draw [-stealth, thick] (0, 0) -- (0, 2) node [left, pos=1] {\small{$N$}};
+        \draw [-stealth, thick] (0, 0) -- (0, -2) node [left, pos=1] {\small{$W$}};
+    \end{tikzpicture}
+\end{figure}
+Se tiene entonces que:
+\begin{align}
+\sum F_{x} &= F_{x} - f_{k} = 0 \label{eq:ecuacion_01} \\[0.5em]
+\sum F_{y} &= N + (-W) + F_{y} = 0 \label{eq:ecuacion_02}
+\end{align}
+De la ecuación (\ref{eq:ecuacion_01}):
+\begin{align}
+F_{x} = f_{k} = \mu_{k} \, N \label{eq:ecuacion_03}
+\end{align}
+De la ecuación (\ref{eq:ecuacion_02}):
+\begin{align}
+N = P - F_{y} \label{eq:ecuacion_04}
+\end{align}
+Sustituyendo la ec. (\ref{eq:ecuacion_04}) en la ec. (\ref{eq:ecuacion_03}):
+\begin{align}
+F_{x} = \mu_{k} (P - F_{y}) \label{eq:ecuacion_05}
+\end{align}
+y como:
+\begin{align}
+F_{x} &= F \, \cos \ang{20} = F \, (0.9397) \label{eq:ecuacion_06} \\[0.5em]
+F_{y} &= F \, \sin \ang{20} = F \, (0.3420) \label{eq:ecuacion_07}
+\end{align}
+Sustituyendo las ecs. (\ref{eq:ecuacion_06}) y (\ref{eq:ecuacion_07}) en la ec. (\ref{eq:ecuacion_05}):
+\begin{align*}
+F \, (0.9397) &= 0.3 ( \SI{150}{\newton} - F \, (0.3420)) \\[0.5em]
+F \, (0.9397) &= \SI{45}{\newton} - F \, (0.1) \\[0.5em]
+F \, (0.9397) + F \, (0.1) &= \SI{45}{\newton} \\[0.5em]
+F &= \dfrac{\SI{45}{\newton}}{1.0397} = \SI{43.28}{\newton}
+\end{align*}
+\item Una motocicleta cuyo peso tiene una magnitud de \SI{1800}{\newton} se mueve a una velocidad cuya magnitud es de \SI{60}{\kilo\meter\per\hour}. Al aplicar los frenos se detiene a una distancia de \SI{25}{\meter}. Calcula la magnitud de la fuerza de fricción promedio que la detiene.
+\begin{align*}
+v_{i} &= \SI[per-mode=fraction]{60}{\kilo\meter\per\hour}\left( \dfrac{\SI{1000}{\meter}}{\SI{1}{\kilo\meter}} \right) \left( \dfrac{\SI{1}{\hour}}{\SI{3600}{\second}} \right) = \SI{16.66}{\meter\per\second} \\[0.5em]
+v_{f}^{2} &= v_{i}^{2} + 2 \, a \, d \hspace{0.3cm} \Rightarrow \hspace{0.3cm} 0 = v_{0}^{2} + 2 \, a \, d \\[0.5em]
+a &= - \dfrac{v_{0}^{2}}{2 \, d} = - \dfrac{(\SI{16.66}{\meter\per\second})^{2}}{2 (\SI{25}{\meter})} = - \SI{5.55}{\meter\per\square\second} \\[0.5em]
+F &= \dfrac{W}{g} \, a = \dfrac{\SI{1800}{\newton}}{\SI{9.81}{\meter\per\square\second}} (- \SI{5.55}{\meter\per\square\second}) = - \SI{1019.39}{\newton}
+\end{align*}
+\end{enumerate}
+
+\end{document}

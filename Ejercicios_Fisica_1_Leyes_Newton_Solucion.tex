@@ -1,0 +1,98 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\DeclareSIUnit[number-unit-product = {\,}]\cal{cal}
+
+%\renewcommand{\questionlabel}{\thequestion)}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+
+\title{\vspace*{-2cm} Ejercicios Leyes de Newton - Solución\vspace{-5ex}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+Esta actividad otorgará hasta \textbf{8 puntos} de Evaluación Continua.
+\vspace*{0.5cm}
+
+\textbf{Instrucciones: }
+\begin{itemize}
+\item Anota tu nombre en cada hoja que ocupes para resolver los ejercicios.
+\item Identifica el ejercicio que resuelves.
+\item Resuelve detalladamente cada ejercicio, en caso de que no se tenga el desarrollo, no se tomará en cuenta como ejercicio completo.
+\item Revisa y detalla con cuidado el manejo de las unidades.
+\item En caso de plagios, se cancelarán todos los trabajos involucrados.
+\end{itemize}
+
+\section{Ejercicios a cuenta.}
+
+\begin{enumerate}
+\item Ordena las siguientes situaciones de acuerdo con la magnitud de la aceleración del objeto, de la más baja a la más alta.
+\begin{enumerate}[label=\alph*)]
+\item Sobre un objeto de \SI{2.0}{\kilo\gram} actúa una fuerza neta de \SI{2.0}{\newton}
+\item Sobre un objeto de \SI{2.0}{\kilo\gram} actúa una fuerza neta de \SI{8.0}{\newton}
+\item Sobre un objeto de \SI{8.0}{\kilo\gram} actúa una fuerza neta de \SI{2.0}{\newton}
+\item Sobre un objeto de \SI{8.0}{\kilo\gram} actúa una fuerza neta de \SI{8.0}{\newton}
+\end{enumerate}
+a) $a = \dfrac{\SI{2.0}{\newton}}{\SI{2.0}{\kilo\gram}} = \SI{1}{\meter\per\square\second}$
+
+b) $a = \dfrac{\SI{8.0}{\newton}}{\SI{2.0}{\kilo\gram}} = \SI{4}{\meter\per\square\second}$
+
+c) $a = \dfrac{\SI{2.0}{\newton}}{\SI{8.0}{\kilo\gram}} = \SI{0.25}{\meter\per\square\second}$
+
+d) $a = \dfrac{\SI{8.0}{\newton}}{\SI{8.0}{\kilo\gram}} = \SI{1}{\meter\per\square\second}$
+
+Por lo tanto, de menor a mayor aceleración se tiene:
+
+c) \quad a) \quad c) \quad b)
+\item Determina la fuerza que se necesita aplicar a un coche de \SI{800}{\kilo\gram} para que éste se acelere \SI{4}{\meter\per\square\second}.
+\begin{align*}
+F = m \, a = (\SI{800}{\kilo\gram})(\SI{4}{\meter\per\square\second}) = \SI{3200}{\newton}
+\end{align*}
+\item El resultado de las fuerzas que actúan sobre un cuerpo cuya masa vale \SI{40}{\kilo\gram}, es de \SI{85}{\newton}. ¿Cuál es el valor de la aceleración que experimenta este objeto?
+\begin{align*}
+a = \dfrac{F}{m} = \dfrac{\SI{85}{\newton}}{\SI{40}{\kilo\gram}} = \SI{2.12}{\meter\per\square\second}
+\end{align*}    
+\item ¿Cuál es la masa de un cuerpo si al aplicarle una fuerza de \SI{420}{\newton} adquiere una aceleración de \SI{8.4}{\meter\per\square\second}?
+\begin{align*}
+m = \dfrac{F}{a} = \dfrac{\SI{420}{\newton}}{\SI{8.4}{\meter\per\square\second}} = \SI{50}{\kilogram}
+\end{align*}
+\item Calcula la magnitud de la aceleración que produce una fuerza cuya magnitud es de \SI{100}{\newton} a un triciclo cuya masa es de \SI{6000}{\gram}. Expresa el resultado en \unit{\meter\per\square\second}.
+\begin{align*}
+a = \dfrac{F}{m} = \dfrac{\SI{100}{\newton}}{\SI{6}{\kilo\gram}} = \SI{16.66}{\meter\per\square\second}
+\end{align*}
+\item Determina la magnitud de la fuerza neta que debe aplicarse a un balón cuyo peso tiene una magnitud de
+\SI{4.2}{\newton} para que adquiera una aceleración cuya magnitud es de \SI{3}{\meter\per\square\second}.
+\begin{align*}
+F = m \, a = (\dfrac{\SI{4.2}{\kilo\gram\meter\per\square\second}}{\SI{9.81}{\meter\per\square\second}} )(\SI{3}{\meter\per\square\second}) = \SI{1.28}{\newton}
+\end{align*}    
+\item Calcula la masa de una caja en kilogramos, si al recibir una fuerza cuya magnitud es de \SI{300}{\newton} le produce una aceleración con una magnitud de \SI{150}{\centi\meter\per\square\second}.
+\begin{align*}
+m = \dfrac{F}{a} = \dfrac{\SI{300}{\newton}}{\SI{1.5}{\meter\per\square\second}} = \SI{200}{\kilogram}
+\end{align*}    
+\item Determina la magnitud de la aceleración en \unit{\meter\per\square\second} que le produce una fuerza cuya magnitud de \SI{75}{\newton} a una silla cuya masa es de \SI{1500}{\gram}.
+\begin{align*}
+a = \dfrac{F}{m} = \dfrac{\SI{75}{\newton}}{\SI{1.5}{\kilo\gram}} = \SI{50}{\meter\per\square\second}
+\end{align*}    
+\end{enumerate}
+
+
+\end{document}
